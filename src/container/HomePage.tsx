@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Paper, Typography, Grow, Toolbar, AppBar,Fade,  Button } from '@mui/material';
+import { useState, useEffect } from 'react';
+import { Box, Paper, Grow, Toolbar, AppBar,Fade,  Button } from '@mui/material';
 import {useMediaQuery} from '@mui/material';
 import {Link} from 'react-scroll';
 import { useTheme } from '@mui/material';
 import α from 'color-alpha';
 import { TypeAnimation } from 'react-type-animation';
-import { tokens } from "../utils/theme.js";
 import AboutMe from '../components/AboutMe';
 import Skills from '../components/Skills';
 import BlogHome from '../components/BlogHome';

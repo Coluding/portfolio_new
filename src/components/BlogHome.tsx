@@ -1,5 +1,4 @@
 import {Box, Typography, useTheme, Divider} from "@mui/material";
-import {useMediaQuery} from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 
 

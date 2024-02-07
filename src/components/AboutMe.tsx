@@ -1,5 +1,4 @@
 import {Box, Typography, useTheme} from "@mui/material";
-import { TypeAnimation } from "react-type-animation";
 
 import myself from "../assets/me.jpg";
 
@@ -35,7 +34,7 @@ const AboutMe = () => {
                 textAlign: "center",
             }}>
                 <Typography variant={"h3"}>About Me</Typography>
-                <Box fontSize={theme.typography.body3}>
+                <Box fontSize={theme.typography.body3.fontSize}>
             <Typography >
                 I am a student of Business Adminstration, Computer Science and Mathematics. 
                 <br/>
