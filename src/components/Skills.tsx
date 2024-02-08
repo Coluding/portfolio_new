@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import {useMediaQuery} from "@mui/material";
 import { LinearProgress } from '@mui/material';
 import {Divider} from "@mui/material";
@@ -19,7 +19,6 @@ const Skills = () => {
     const barHeight = isMobile ? "0.2rem" : "1rem";
     const logoWidth = isMobile ? "20px" : "40px";
     const logoHeight = isMobile ? "20px" : "40px";
-    const theme = useTheme();
 
 
     return (

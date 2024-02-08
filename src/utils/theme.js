@@ -75,19 +75,13 @@ let theme = createTheme({
       },
     },
     body1: {
-      fontSize: '1rem',
-      '@media (max-width:600px)': {
-        fontSize: '0.4rem',
-      },
-    },
-    body2: {
       fontSize: '0.9rem',
       '@media (max-width:600px)': {
         fontSize: '0.3rem',
       },
     },
-    body3: {
-      fontSize: '0.8rem',
+    body2: {
+      fontSize: '0.7rem',
       '@media (max-width:600px)': {
         fontSize: '0.2rem',
       },
