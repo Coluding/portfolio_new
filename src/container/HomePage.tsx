@@ -94,7 +94,7 @@ const HomePage = () => {
                             sx={{ 
                                 margin: 'none', 
                                 
-                                fontSize: isMobile ? theme.typography.text.fontSize : theme.typography.body3.fontSize,
+                                fontSize: isMobile ? theme.typography.caption.fontSize : theme.typography.body2.fontSize,
                                 maxWidth: isMobile ? "30vh" : "50vh",
                                 paddingLeft: '1rem', 
                                 paddingRight: '0.5rem',

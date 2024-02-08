@@ -1,6 +1,7 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
-// Define a light color palette
+
+
 const lightPalette = {
   primary: {
     main: '#222422',
@@ -54,7 +55,7 @@ const lightPalette = {
 
 let theme = createTheme({
   palette: lightPalette,
-  typography: { 
+  typography:  { 
     fontFamily: 'Georgia', 
     h1: {
       fontSize: '2rem', 
@@ -86,7 +87,7 @@ let theme = createTheme({
         fontSize: '0.2rem',
       },
     },
-    text: {
+    caption: {
       fontSize: '0.5rem',
       '@media (max-width:600px)': {
         fontSize: '0.2rem',
