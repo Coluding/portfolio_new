@@ -1,4 +1,4 @@
-import {Box, useTheme, Divider, Button} from "@mui/material";
+import {Box, useTheme, Divider, Button, useMediaQuery} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 

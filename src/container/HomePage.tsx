@@ -147,7 +147,7 @@ const HomePage = () => {
                                 color: "black",
                                 backgroundColor: "white"
                             },
-                            fontSize: theme.typography.h3.fontSize
+                            fontSize: isMobile ? theme.typography.h2.fontSize : theme.typography.body1.fontSize
                         }} >About Me</Button>
                         </Link>
                         <Link to="skills" smooth={true} duration={1000} color="white"  offset={offset}>
@@ -157,7 +157,7 @@ const HomePage = () => {
                                 color: "black",
                                 backgroundColor: "white"
                             },
-                            fontSize: theme.typography.h3.fontSize
+                            fontSize: theme.typography.body1.fontSize
                         }} >Skills</Button>
                         </Link>
                         <Link to="blog" smooth={true} duration={1000} color="white" offset={offset}>
@@ -167,7 +167,7 @@ const HomePage = () => {
                                 color: "black",
                                 backgroundColor: "white"
                             },
-                            fontSize: theme.typography.h3.fontSize
+                            fontSize: theme.typography.body1.fontSize
                         }} >Blog</Button>
                         </Link>
                         <Link to="projects" smooth={true} duration={1000} color="white"  offset={offset}>
@@ -177,7 +177,7 @@ const HomePage = () => {
                                 color: "black",
                                 backgroundColor: "white"
                             },
-                            fontSize: theme.typography.h3.fontSize
+                            fontSize: theme.typography.body1.fontSize
                         }} >Projects</Button>
                         </Link>
                         <Link to="socials" smooth={true} duration={1000} color="white">
@@ -187,7 +187,7 @@ const HomePage = () => {
                                 color: "black",
                                 backgroundColor: "white"
                             },
-                            fontSize: theme.typography.h3.fontSize
+                            fontSize: theme.typography.body1.fontSize
                         }} >Socials</Button>
                         </Link>
                         <Button color="inherit">Resume</Button>

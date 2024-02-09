@@ -72,32 +72,32 @@ let theme = createTheme({
     h3: {
       fontSize: '1.4rem',
       '@media (max-width:600px)': {
-        fontSize: '0.6rem',
+        fontSize: '0.8rem',
       },
     },
     body1: {
       fontSize: '0.9rem',
       '@media (max-width:600px)': {
-        fontSize: '0.3rem',
+        fontSize: '0.6rem',
       },
     },
     body2: {
       fontSize: '0.7rem',
       '@media (max-width:600px)': {
-        fontSize: '0.2rem',
+        fontSize: '0.4rem',
       },
     },
     caption: {
       fontSize: '0.5rem',
       '@media (max-width:600px)': {
-        fontSize: '0.2rem',
+        fontSize: '0.4rem',
       },
     },
     button: {
       textTransform: 'none',
       fontSize: '1rem', 
       '@media (max-width:600px)': {
-        fontSize: '0.2rem',
+        fontSize: '0.5rem',
       },
     },
   },
