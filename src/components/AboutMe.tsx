@@ -47,7 +47,6 @@ const AboutMe = () => {
                 gap: theme.spacing(2),
                 textAlign: "center",
             }}>
-                <Typography variant={"h3"}>About Me</Typography>
                 <Box fontSize={theme.typography.body2.fontSize}>
             <Typography >
                 I am a student of Business Adminstration, Computer Science and Mathematics. 

@@ -9,6 +9,7 @@ import AboutMe from '../components/AboutMe';
 import Skills from '../components/Skills';
 import BlogHome from '../components/BlogHome';
 import ProjectsHome from '../components/ProjectsHome.js';
+import Socials from '../components/Socials.js';
 import {ResponsiveBox} from '../components/ResponsiveElements.js';
 import background from "../assets/networking_video.mp4";
 
@@ -22,6 +23,7 @@ const HomePage = () => {
     const displayWidth = window.innerWidth;
     const displayHeight = window.innerHeight;
     const widthRatio = devWidth / displayWidth;
+    const offset = -window.innerHeight * 0.1;
 
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -138,35 +140,56 @@ const HomePage = () => {
                 <AppBar>
                     <Toolbar>
                         <Box display={"flex"} justifyContent={"space-between"} flexGrow={1} color={"white"}>
-                        <Link to="aboutMe" smooth={true} duration={1000} color="white">
+                        <Link to="aboutMe" smooth={true} duration={1000} color="white"  offset={offset}>
                         <Button sx={{
                             color: "white",
                             "&:hover": {
                                 color: "black",
                                 backgroundColor: "white"
-                            }
+                            },
+                            fontSize: theme.typography.h3.fontSize
                         }} >About Me</Button>
                         </Link>
-                        <Link to="skills" smooth={true} duration={1000} color="white">
+                        <Link to="skills" smooth={true} duration={1000} color="white"  offset={offset}>
                         <Button sx={{
                             color: "white",
                             "&:hover": {
                                 color: "black",
                                 backgroundColor: "white"
-                            }
+                            },
+                            fontSize: theme.typography.h3.fontSize
                         }} >Skills</Button>
                         </Link>
-                        <Link to="blog" smooth={true} duration={1000} color="white">
+                        <Link to="blog" smooth={true} duration={1000} color="white" offset={offset}>
                         <Button sx={{
                             color: "white",
                             "&:hover": {
                                 color: "black",
                                 backgroundColor: "white"
-                            }
+                            },
+                            fontSize: theme.typography.h3.fontSize
                         }} >Blog</Button>
                         </Link>
-                        <Button color="inherit">Projects</Button>
-                        <Button color="inherit">Socials</Button>
+                        <Link to="projects" smooth={true} duration={1000} color="white"  offset={offset}>
+                        <Button sx={{
+                            color: "white",
+                            "&:hover": {
+                                color: "black",
+                                backgroundColor: "white"
+                            },
+                            fontSize: theme.typography.h3.fontSize
+                        }} >Projects</Button>
+                        </Link>
+                        <Link to="socials" smooth={true} duration={1000} color="white">
+                        <Button sx={{
+                            color: "white",
+                            "&:hover": {
+                                color: "black",
+                                backgroundColor: "white"
+                            },
+                            fontSize: theme.typography.h3.fontSize
+                        }} >Socials</Button>
+                        </Link>
                         <Button color="inherit">Resume</Button>
                         <Button color="inherit">Contact</Button>
                         </Box>
@@ -202,12 +225,16 @@ const HomePage = () => {
                     <BlogHome/>
                     </Box>
                     </Fade>
-                    <Box id="blog" marginTop={"5%"}>
-                        {undefined}
-                    </Box>
+                  
                     <Fade in={displayBlog} timeout={1500}>
                     <Box marginTop={"0%"} >
                     <ProjectsHome/>
+                    </Box>
+                    </Fade>
+                    
+                    <Fade in={displayBlog} timeout={1500}>
+                    <Box marginTop={"0%"} >
+                    <Socials/>
                     </Box>
                     </Fade>
                     </Box>                      
