@@ -1,9 +1,11 @@
-import {Box, Typography, useTheme, Divider} from "@mui/material";
+import {Box, useTheme, Divider, Button} from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
 
 const BlogHome = () => {
     const theme = useTheme();
+    const navigate = useNavigate();
     return (
         <Box display={"flex"} 
         sx={{
@@ -16,12 +18,7 @@ const BlogHome = () => {
         
         }}>
              <Divider sx={{ width: '100%', fontWeight:"bold"}}>Blog</Divider>
-            <Typography variant={"h2"}sx={{
-                fontSize: theme.typography.h2.fontSize,
-                fontWeight: "bold",
-            }}>
-                Blog
-            </Typography>
+        
             <Box fontSize={theme.typography.h3.fontSize}>
                 <TypeAnimation
                     cursor={true}
@@ -29,6 +26,16 @@ const BlogHome = () => {
                     repeat={Infinity}
                 />
                 </Box>
+                <Button 
+                    onClick={() => navigate("/blog")}
+                    sx={{
+                    color: "white",
+                    backgroundColor:"black",
+                    borderRadius: "10px",
+                   
+                }}>
+                    See more ...
+                </Button>
         </Box>
     )
 }

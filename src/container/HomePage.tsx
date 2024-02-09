@@ -8,6 +8,7 @@ import { TypeAnimation } from 'react-type-animation';
 import AboutMe from '../components/AboutMe';
 import Skills from '../components/Skills';
 import BlogHome from '../components/BlogHome';
+import ProjectsHome from '../components/ProjectsHome.js';
 import {ResponsiveBox} from '../components/ResponsiveElements.js';
 import background from "../assets/networking_video.mp4";
 
@@ -18,18 +19,16 @@ const HomePage = () => {
     const [displaySkills, setDisplaySkills] = useState<boolean>(false);
     const [displayBlog, setDisplayBlog] = useState<boolean>(false);
     const devWidth = 1522;
-    const devHeight = 800;
     const displayWidth = window.innerWidth;
     const displayHeight = window.innerHeight;
     const widthRatio = devWidth / displayWidth;
-    const heightRatio = devHeight / displayHeight;
 
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     useEffect(() => {
         console.log(displayWidth)
         const handleScroll = () => {
-            const currentScroll = window.scrollY * heightRatio;
+            const currentScroll = window.scrollY * widthRatio;
             let newOpacity = 1 - currentScroll / displayHeight;
             setOpacity(newOpacity);
         };
@@ -40,6 +39,7 @@ const HomePage = () => {
     }, []);
 
     useEffect(() => {
+        console.log(opacity)
         const threshold = isMobile ? 0.12 : 0.01;
         if (opacity < threshold){
             setDisplayAbout(true)
@@ -62,7 +62,7 @@ const HomePage = () => {
     }, [opacity]);
 
     useEffect(() => {
-        const threshold = isMobile ? -0.1 : -2.1;
+        const threshold = isMobile ? -0.1 : -1.5;
         if (opacity < threshold){
             setDisplayBlog(true)
         } else {
@@ -174,7 +174,11 @@ const HomePage = () => {
                 </AppBar>   
                 </Box>
                 
-                <Box sx={{ marginTop: `${1/widthRatio * 200}px`, color:  theme.palette.text.primary, height:"100h"}} 
+                <Box sx={{ 
+                    marginTop: `${1/widthRatio * 200}px`,
+                     color:  theme.palette.text.primary,
+                      height:"100h",
+                    zIndex: 9,}} 
                 position={"absolute"}>
                   
                     <Fade in={displayAbout} timeout={1500}>
@@ -194,8 +198,16 @@ const HomePage = () => {
                         {undefined}
                     </Box>
                     <Fade in={displayBlog} timeout={1500}>
-                    <Box marginTop={"0%"}>
+                    <Box marginTop={"0%"} >
                     <BlogHome/>
+                    </Box>
+                    </Fade>
+                    <Box id="blog" marginTop={"5%"}>
+                        {undefined}
+                    </Box>
+                    <Fade in={displayBlog} timeout={1500}>
+                    <Box marginTop={"0%"} >
+                    <ProjectsHome/>
                     </Box>
                     </Fade>
                     </Box>                      
