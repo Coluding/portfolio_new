@@ -19,18 +19,10 @@ const ProjectsHome = () => {
         
             <Box display={"flex"} 
             flexDirection={"row"} justifyContent={"space-evenly"} margin={"2%"}>
-                <Box sx={{
-                textAlign: "right",
-                display: "grid",
-                placeItems: "center",
-               }}>
-               <Typography variant="h3">
-                     Welcome to my Projects
-               </Typography>
-               </Box>
+                
                <Box sx={{
-                textAlign: "left",
-                maxWidth: "50%",
+                textAlign: "center",
+                maxWidth: "75%",
                }}>
                <Typography variant="body1">
                         I have worked on a variety of projects in AI, Machine Learning and Software Development.

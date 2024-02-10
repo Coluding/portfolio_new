@@ -1,10 +1,13 @@
-import {Box, Typography, useTheme, Divider} from "@mui/material";
+import {Box, Typography, useTheme, Divider, Button} from "@mui/material";
 
 import myself from "../assets/me.jpg";
+import cv from "../assets/lebenslauf.pdf";
 
 
 const AboutMe = () => {
     const theme = useTheme();
+
+
     return (
         <Box display={"grid"} gridTemplateColumns={"repeat(4, 1fr)"}>
            <Box sx={{
@@ -49,7 +52,7 @@ const AboutMe = () => {
             }}>
                 <Box fontSize={theme.typography.body2.fontSize}>
             <Typography >
-                I am a student of Business Adminstration, Computer Science and Mathematics. 
+                I am a student of Computer Science, Information Systems and Business Adminstration. 
                 <br/>
                 I wrote my Bachelor thesis about efficient Transformers under computational constraints for financial text data. 
                 <br/>
@@ -62,7 +65,16 @@ const AboutMe = () => {
                 I am passionate about AI, Machine Learning and Software Development.
             </Typography>
             </Box>
-
+            <Box sx={{ textAlign: 'center', marginTop: theme.spacing(2) }}>
+            <Button
+              variant="contained"
+              href={cv}
+              download="lukas-bierling-cv.pdf"
+            >
+              Download CV
+            </Button>
+          </Box>
+   
    
             </Box>
             
