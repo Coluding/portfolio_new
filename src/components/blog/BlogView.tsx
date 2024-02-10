@@ -1,19 +1,64 @@
 import { Box, useTheme, Divider, Typography, Grow, Paper, useMediaQuery } from "@mui/material";
 import α from 'color-alpha';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { useState } from "react";
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
 import {BlogTemplate} from "./BlogTemplate";
 import { useEffect } from "react";
+import { BlogCategory } from "../../utils/entitities";
 
 import { blogs } from "./blogs";
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+    },
+  },
+};
+
+const availableCategories: BlogCategory[] = Object.keys(BlogCategory) as BlogCategory[];
+
 
 
 const BlogView = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+    const [categories, setCategories] = useState<string[]>([]);
+    const [filteredBlogs, setFilteredBlogs] = useState(blogs);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+        if (categories.length === 0) {
+          setFilteredBlogs(blogs);
+        } else {
+          setFilteredBlogs(
+            blogs.filter((blog) =>
+              categories.some((category) =>
+                blog.categories.includes(BlogCategory[category]),
+              ),
+            ),
+          );
+        }
+      }, [categories]);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+    
+    const handleChange = (event: SelectChangeEvent<typeof categories>) => {
+        const {
+          target: { value },
+        } = event;
+        setCategories(
+          typeof value === 'string' ? value.split(',') : value,
+        );
+      };
 
     return (
         <Box display={"flex"} flexDirection={"column"}
@@ -39,10 +84,38 @@ const BlogView = () => {
                                     isTablet ? "h2": "h1"} fontWeight={"bold"}>My Personal Blog</Typography>
                 <Typography variant={isMobile ? "body2": 
                                     isTablet? "body1": "h3"}>
-                    I am trying to document and share my journey in AI, Machine Learning
+                    I am trying to document and share my journey in AI and Machine Learning
                 </Typography>
                 </Box>
             <Divider sx={{ width: '100%'}}></Divider>
+            </Box>
+            <Box display={"flex"} justifyContent={"center"} 
+            sx={{
+                backgroundColor: "white",
+    
+            }}>
+            <FormControl sx={{ m: 2, width: "50%" }}>
+        <InputLabel id="demo-multiple-name-label">Filter category</InputLabel>
+        <Select
+          labelId="filter.category"
+          id="filter-category"
+          multiple
+          value={categories}
+          onChange={handleChange}
+          input={<OutlinedInput label="Filter category" />}
+          MenuProps={MenuProps}
+        >
+          {availableCategories.map((name) => (
+            <MenuItem
+              key={name}
+              value={name}
+              
+            >
+              {name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
             </Box>
             <Box sx={{
                 display: "grid",
@@ -50,7 +123,7 @@ const BlogView = () => {
                 gridTemplateRows: "repeat(3, 1fr)",
                 gap: theme.spacing(2),
             }}>
-            {blogs.map((blog) => (
+            {filteredBlogs.map((blog) => (
                 <>
                  <Box sx={{
                     gridColumn: "span 1",

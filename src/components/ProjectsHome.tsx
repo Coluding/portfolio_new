@@ -17,7 +17,8 @@ const ProjectsHome = () => {
         }}>
              <Divider sx={{ width: '100%', fontWeight:"bold"}}>Projects</Divider>
         
-            <Box display={"flex"} flexDirection={"row"} justifyContent={"space-evenly"} margin={"10px"}>
+            <Box display={"flex"} 
+            flexDirection={"row"} justifyContent={"space-evenly"} margin={"2%"}>
                 <Box sx={{
                 textAlign: "right",
                 display: "grid",

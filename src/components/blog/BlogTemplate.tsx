@@ -22,8 +22,9 @@ const CategoryBox: React.FC<{category: BlogCategory, variant: "body2" | "caption
   return (
     <Button sx={{
       backgroundColor: "lightblue",
-      borderRadius: "25%",
-      padding: "0%",
+      borderRadius: "25px",
+      padding: "2px",
+      paddingLeft: "2%",
       color: "white",
       margin: "0px",
     }}>
