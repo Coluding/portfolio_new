@@ -73,7 +73,9 @@ const HomePage = () => {
     }, [opacity]);
 
     return (
-        <Box>
+        <Box sx={{
+            background:"white"
+        }}>
             {!false &&
             <ResponsiveBox sx={{
                  opacity: opacity,
@@ -136,9 +138,26 @@ const HomePage = () => {
             height={"100vh"}
                 
            >    
-           <Box position={"fixed"} zIndex={10}>
-                <AppBar>
-                    <Toolbar>
+           <Box position={"fixed"} zIndex={10}
+           sx={{
+                width: "100%",
+                maxWidth: "100%",
+                background: α("black", 0.9),
+                backdropFilter: "blur(10px)",
+                color: "white",
+                padding: "10px",
+                top: 0,
+                left: 0,
+                right: 0,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+
+                boxShadow: "0px 2px 5px 0px rgba(0,0,0,0.75)",
+                zIndex: 10
+              
+           }}
+           >
                         <Box display={"flex"} justifyContent={"space-between"} flexGrow={1} color={"white"}>
                         <Link to="aboutMe" smooth={true} duration={1000} color="white"  offset={offset}>
                         <Button sx={{
@@ -190,11 +209,18 @@ const HomePage = () => {
                             fontSize: theme.typography.body1.fontSize
                         }} >Socials</Button>
                         </Link>
-                        <Button color="inherit">Resume</Button>
-                        <Button color="inherit">Contact</Button>
+                        <Link to="contact" smooth={true} duration={1000} color="white"  offset={offset}>
+                        <Button sx={{
+                            color: "white",
+                            "&:hover": {
+                                color: "black",
+                                backgroundColor: "white"
+                            },
+                            fontSize: theme.typography.body1.fontSize
+                        }} >Contact</Button>
+                        </Link>
                         </Box>
-                    </Toolbar>
-                </AppBar>   
+    
                 </Box>
                 
                 <Box sx={{ 
@@ -228,13 +254,13 @@ const HomePage = () => {
                     </Fade>
                   
                     <Fade in={displayBlog} timeout={1500}>
-                    <Box marginTop={"0%"} >
+                    <Box id="projects" marginTop={"0%"} >
                     <ProjectsHome/>
                     </Box>
                     </Fade>
                     
                     <Fade in={displayBlog} timeout={1500}>
-                    <Box marginTop={"0%"} >
+                    <Box id="socials" marginTop={"0%"} >
                     <Socials/>
                     </Box>
                     </Fade>

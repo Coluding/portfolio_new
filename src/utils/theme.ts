@@ -70,7 +70,7 @@ let theme = createTheme({
       },
     },
     h3: {
-      fontSize: '1.4rem',
+      fontSize: '1.2rem',
       '@media (max-width:600px)': {
         fontSize: '0.8rem',
       },

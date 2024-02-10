@@ -10,7 +10,7 @@ export const blogs: BlogTemplateProps[] = [
         id: 1,
     },
     {
-        img: "https://img.freepik.com/vektoren-kostenlos/blaue-futuristische-netzwerktechnologie_53876-100679.jpg?w=996&t=st=1707431232~exp=1707431832~hmac=c7c0e334127971920ecd01327b826f4803a405fc40409b3727908ede8a9ce084",
+        img: "https://images.unsplash.com/photo-1568952433726-3896e3881c65?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         title: "Reformer: The Efficient Transformer",
         summary: "The Reformer is a transformer model that is designed to handle long sequences more efficiently than the standard transformer model. It uses a combination of locality-sensitive hashing and reversible layers to achieve this. In this post, we will explore the Reformer model and its architecture in detail. We will also look at the results of the Reformer model on various tasks and compare it to the standard transformer model. Finally, we will discuss the advantages and disadvantages of the Reformer model and its potential applications",
         categories: [BlogCategory.WebDevelopment],

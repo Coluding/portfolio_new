@@ -1,10 +1,12 @@
-import {Box, useTheme, Divider, Button} from "@mui/material";
+import {Box, useTheme, Divider, Button, useMediaQuery} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
 
 const BlogHome = () => {
     const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     const navigate = useNavigate();
     return (
         <Box display={"flex"} 
@@ -19,7 +21,7 @@ const BlogHome = () => {
         }}>
              <Divider sx={{ width: '100%', fontWeight:"bold"}}>Blog</Divider>
         
-            <Box fontSize={theme.typography.h3.fontSize}>
+            <Box fontSize={isMobile ? theme.typography.body1.fontSize : theme.typography.h3.fontSize}>
                 <TypeAnimation
                     cursor={true}
                     sequence={["Welcome to my Blog", 1000, "I write about AI, Machine Learning and Software Development", 1000]}

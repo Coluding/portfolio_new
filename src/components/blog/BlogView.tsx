@@ -82,7 +82,7 @@ const BlogView = () => {
                 }}>
                 <Typography variant={isMobile ?  "h3" : 
                                     isTablet ? "h2": "h1"} fontWeight={"bold"}>My Personal Blog</Typography>
-                <Typography variant={isMobile ? "body2": 
+                <Typography variant={isMobile ? "body1": 
                                     isTablet? "body1": "h3"}>
                     I am trying to document and share my journey in AI and Machine Learning
                 </Typography>
@@ -125,12 +125,14 @@ const BlogView = () => {
             }}>
             {filteredBlogs.map((blog) => (
                 <>
+                {!isMobile &&
                  <Box sx={{
                     gridColumn: "span 1",
                     gridRow: "span 1",
                  }}>
                  {undefined}
                     </Box>
+}
                 <Grow in={true} timeout={1000}>
                 <Paper elevation={5} sx={{
                     ":hover": {
@@ -138,7 +140,7 @@ const BlogView = () => {
                     },
                     cursor: "pointer",
                     display: "flex",
-                    gridColumn: "span 4",
+                    gridColumn: isMobile ? "span 6" : "span 4",
                     gridRow: "span 1",
                  
                     alignItems: "start",
@@ -149,12 +151,14 @@ const BlogView = () => {
                 <BlogTemplate {...blog} />
                 </Paper>
                 </Grow> 
-                <Box sx={{
+                {!isMobile &&
+                 <Box sx={{
                     gridColumn: "span 1",
                     gridRow: "span 1",
                  }}>
                  {undefined}
                     </Box>
+}
                 </>
             ))}
             </Box>
