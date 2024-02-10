@@ -31,7 +31,7 @@ const HomePage = () => {
         console.log(displayWidth)
         const handleScroll = () => {
             const currentScroll = window.scrollY * widthRatio;
-            let newOpacity = 1 - currentScroll / displayHeight;
+            const newOpacity = 1 - currentScroll / displayHeight;
             setOpacity(newOpacity);
         };
        
@@ -201,7 +201,8 @@ const HomePage = () => {
                     marginTop: `${1/widthRatio * 200}px`,
                      color:  theme.palette.text.primary,
                       height:"100h",
-                    zIndex: 9,}} 
+                    zIndex: 9,
+                    background: "white"}} 
                 position={"absolute"}>
                   
                     <Fade in={displayAbout} timeout={1500}>

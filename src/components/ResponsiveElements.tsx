@@ -5,11 +5,12 @@ export const ResponsiveBox = styled(Box)(({ theme }) => ({
     position: 'fixed',
     top: 0,
     left: 0,
-    width: '100%',
+    width: '100vw',
     height: '100vh',
     zIndex: 2,
     display: 'flex',
     justifyContent: 'center',
+    backgroundColor: "white",
     alignItems: 'center',
     transition: 'opacity 0.5s ease-out',
     [theme.breakpoints.down('sm')]: {
