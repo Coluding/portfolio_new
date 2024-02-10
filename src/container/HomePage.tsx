@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Box, Paper, Grow, Toolbar, AppBar,Fade,  Button } from '@mui/material';
+import { Box, Paper, Grow,Fade,  Button } from '@mui/material';
 import {useMediaQuery} from '@mui/material';
 import {Link} from 'react-scroll';
 import { useTheme } from '@mui/material';
