@@ -40,7 +40,7 @@ const BlogView = () => {
           setFilteredBlogs(
             blogs.filter((blog) =>
               categories.some((category) =>
-                blog.categories.includes(BlogCategory[category]),
+                blog.categories.includes(BlogCategory[category as keyof typeof BlogCategory]),
               ),
             ),
           );
@@ -51,7 +51,7 @@ const BlogView = () => {
         window.scrollTo(0, 0);
     }, [])
     
-    const handleChange = (event: SelectChangeEvent<typeof categories>) => {
+    const handleChange = (event: SelectChangeEvent<string[]>) => {
         const {
           target: { value },
         } = event;
