@@ -15,6 +15,7 @@ export interface BlogTemplateProps {
   title: string;
   summary: string;
   categories: BlogCategory[]; 
+  content: string;
   id: number
 } 
 
