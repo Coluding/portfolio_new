@@ -1,10 +1,12 @@
-import {Box, useTheme, Divider, Button, Typography} from "@mui/material";
+import {Box, useTheme, Divider, Button, Typography, useMediaQuery} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 
 const ProjectsHome = () => {
     const theme = useTheme();
     const navigate = useNavigate();
+    const isMobile = useMediaQuery("(max-width: 600px)");
+
     return (
         <Box display={"flex"} 
         sx={{
@@ -18,11 +20,10 @@ const ProjectsHome = () => {
              <Divider sx={{ width: '100%', fontWeight:"bold"}}>Projects</Divider>
         
             <Box display={"flex"} 
-            flexDirection={"row"} justifyContent={"space-evenly"} margin={"2%"}>
-                
+            flexDirection={"row"} justifyContent={"space-evenly"} margin={"2    %"}>
                <Box sx={{
                 textAlign: "center",
-                maxWidth: "75%",
+                maxWidth: isMobile ? "75%" : "50%"
                }}>
                <Typography variant="body1">
                         I have worked on a variety of projects in AI, Machine Learning and Software Development.

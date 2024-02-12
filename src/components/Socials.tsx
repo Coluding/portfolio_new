@@ -41,7 +41,7 @@ const Socials = () => {
                         height:"30%",
                         color:"black"}}/>
                 </Link>
-                <Typography variant="h5">LinkedIn</Typography>
+                <Typography variant="h3">LinkedIn</Typography>
                 </Box>
                 <Box>
                 <Link to={"https://github.com/Coluding"} target="_blank">
@@ -54,7 +54,7 @@ const Socials = () => {
                         height:"30%",
                         color:"black"}}/>
                 </Link>
-                <Typography variant="h5">Github</Typography>
+                <Typography variant="h3">Github</Typography>
                 </Box>
 
                 <Box >
@@ -68,7 +68,7 @@ const Socials = () => {
                         height:"30%",
                         color:"black"}}/>
                 </Link>
-                <Typography variant="h5">Kaggle</Typography>
+                <Typography variant="h3">Kaggle</Typography>
                 </Box>
                </Box>
         </Box>
