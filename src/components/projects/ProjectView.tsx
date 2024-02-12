@@ -6,7 +6,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import { ProjectTemplate, ProjectTemplateProps } from "./ProjectTemplate";
+import { ProjectTemplate } from "./ProjectTemplate";
 import { useEffect } from "react";
 import { BlogCategory } from "../../utils/entitities";
 
@@ -40,7 +40,7 @@ const ProjectView = () => {
             setFilteredProjects(
             projects.filter((project) =>
               categories.some((category) =>
-                blog.categories.includes(BlogCategory[category as keyof typeof BlogCategory]),
+                project.categories.includes(BlogCategory[category as keyof typeof BlogCategory]),
               ),
             ),
           );
