@@ -53,5 +53,46 @@ export const blogs: BlogTemplateProps[] = [
         title: "Deep Learning Code Collection",
         id: 3
     },
+    {
+        img: "https://img.freepik.com/vektoren-kostenlos/big-data-konzept-hintergrund_52683-24459.jpg?w=996&t=st=1707762812~exp=1707763412~hmac=bcd43fb2e93966f366732662889eb75ca975d8d2879eedd970eab1625834d636",
+        summary: "Sliding-window attention is a novel attention mechanism that has been proposed to address the limitations of traditional attention mechanisms in machine learning. Traditional attention mechanisms, such as the scaled dot-product attention, have been shown to be computationally expensive and memory-intensive, particularly when processing long sequences. Sliding-window attention addresses these limitations by restricting attention to a fixed-size window around the attention token, thereby reducing the computational and memory demands of the attention mechanism. This optimization makes it possible to process longer sequences on standard hardware, making advanced machine learning applications more accessible and scalable.",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.NLP],
+        content: String.raw `To overcome the limitations imposed by the quadratic complexity of standard attention mechanisms, it is essential to sparsify the attention matrix. This entails to design a scheme whereby each token $x_i$ for $i \in {0, 1, \ldots, n}$ attends selectively to a subset of tokens indexed by $S_i \subseteq \{0, 1, \ldots, n\}$. Such an approach ensures that not every token is attended to by every other, thereby reducing the computational burden of each attention operation. This reduction introduces a critical trade-off: the smaller the size of $S_i$, the lower the computational cost, yet with the increasing risk of omitting interactions crucial for capturing the intended semantics of the input.\\
+        The selection of the subset $S_i$ need not be static but can vary depending on the token at position $i$. Our objective is to find a set of positions $S_i$ for each token such that the resulting sparsified attention matrix closely approximates the full attention matrix in the best possible way.
+        $$\\$$
+        One way to sparsify the attention matrix is to use sliding windows as fixed pattern around the current token $x_i$. For a fixed window size $w$ each token attends to $\frac{w}{2}$ tokens on each side (\textcite{DBLP:journals/corr/abs-2004-05150:longformer}). The set $S_i$, representing the indices of tokens within the window of $x_i$, can be formalized as: 
+        \begin{equation}
+           S_i = \{i-\frac{w}{2}, \ldots, i, \ldots, i+\frac{w}{2}\}
+        \end{equation}
+        The authors of the paper which introduced the concept explained: "Using multiple stacked layers of such windowed attention results in a large
+receptive field, where top layers have access to all input locations and have the capacity to build representations that incorporate information across the
+entire input, similar to CNNs"(\textcite{DBLP:journals/corr/abs-2004-05150:longformer}). This can also be seen as a giving the model an inductive bias where human assumptions are coded into the model's structure and architecture. By doing this the model is forced to learn in a specific way, here by limiting its attention to a local neighborhood. The window size $w$ may also vary across different layers and as such is a tunable hyperparameter. $$\\$$
+We adjust the current computation of the attention matrix $\mathbf{S}$ with: 
+\begin{equation}
+    \mathbf{S}_i^\mathrm{w}(Q_i,K_{S_i}) = softmax(\frac{{Q_i}{K_{S_i}}^\mathrm{T}}{\sqrt{d_k}})
+\end{equation} for each token $x_i$. To compute the final attention output $\mathbf{A}^\mathrm{w}$ we need to consider the local context of the attention matrix $\mathbf{S_i}^\mathrm{w}$ and therefore start by calculating $\mathbf{A_i}^\mathrm{w}$ as: 
+\begin{equation}
+    \mathbf{A_i}^\mathrm{w}(Q_i,K_{S_i},V_{S_i}) = \mathbf{S_i}^\mathrm{w}(Q_i, K_{S_i})V_{S_i}
+\end{equation} 
+finalize the attention output, each token-wise attention output $\mathbf{A_i}^\mathrm{w}$ is concatenated row-wise:
+\begin{equation}
+    \mathbf{A}^\mathrm{w}(Q,K) = Concat_{row}(\mathbf{A}_0^\mathrm{w}(Q_0, K_{S_0},V_{S_0}),\ldots,
+    \mathbf{A}_n^\mathrm{w}(Q_n, K_{S_n}, V_{S_n}))
+\end{equation} where $$Q_{i} \in \mathbb{R}^\mathrm{1\times d_{model}}$$  is the query vector for token $x_i$ and $ K_{S_i}  \in \mathbb{R}^\mathrm{w\times d_{model}}$ is a subset of the key matrix $K$ that corresponds to the window $S_i$ containing only the keys that token $x_i$ is allowed to attend to and finally, $ V_{S_i} \in \mathbb{R}^\mathrm{w\times d_{model}}$ the subset of the value matrix $V$. 
+he sliding-window attention matrix is of shape $n\times w$ instead of $n\times n$ and the final attention output is again of shape $n\times d_{model}$
+
+Since each token attends to $w$ other tokens the complexity of the sliding window attention mechanism can formally described as: 
+\begin{equation}
+    \mathbf{S^\mathrm{w}} = \mathcal{O}(nw)
+\end{equation}
+and thus scales linearly with the input sequence length $n$.
+To ease the understanding in the following section, a set $H$ is defined which contains all the additional hyperparameters that have to be considered using the novel approaches. Currently $H$ can be described as:
+\begin{align*}
+    H = \{W\}
+\end{align*}
+where $W$ contains the window sizes $w_l$ for each layer $l$.`,
+        title: "Sliding Window Attention Mechanism",
+        id: 4
+    }
 
 ]

@@ -1,4 +1,4 @@
-import {Box, Divider, Typography, useTheme} from "@mui/material";
+import {Box, Divider, Typography, useTheme, Fade} from "@mui/material";
 import { useParams } from 'react-router-dom';
 import 'katex/dist/katex.min.css'
 import { convertToCustomFormat } from '../../utils/latex';
@@ -12,7 +12,9 @@ const MathBlog= () => {
   const {id} = useParams();
   const blog = blogs.find(blog => blog.id === parseInt(id || ""));
   return (
-    <Box>
+    <Box margin={"3%"}>
+      <Fade  in={true} timeout={1500}>
+      <Box >
       {blog && (
         <>
           <Typography variant={"h4"} sx={{textAlign: "center", padding: theme.spacing(2)}}>{blog.title}</Typography>
@@ -23,6 +25,8 @@ const MathBlog= () => {
     
         </>
       )}
+      </Box>
+      </Fade>
     </Box>
   );
 };

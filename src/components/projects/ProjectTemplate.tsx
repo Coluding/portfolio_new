@@ -1,4 +1,4 @@
-import {Box, Typography, useTheme, useMediaQuery, CardActionArea} from "@mui/material";
+import {Box, Typography, useTheme, Divider, useMediaQuery, CardActionArea} from "@mui/material";
 import * as React from 'react';
 import { useNavigate } from "react-router-dom";
 import Card from '@mui/material/Card';
@@ -8,15 +8,16 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-import { BlogCategory } from "../../utils/entitities";
+import { BlogCategory, TechStack } from "../../utils/entitities";
 
-export interface BlogTemplateProps {
+export interface ProjectTemplateProps {
   img: string;
+  techStack: TechStack[];
   title: string;
   summary: string;
   categories: BlogCategory[]; 
-  content : string;
   id: number
+  
 } 
 
 const CategoryBox: React.FC<{category: BlogCategory, variant: "body2" | "caption"}> = (props) => {
@@ -34,7 +35,22 @@ const CategoryBox: React.FC<{category: BlogCategory, variant: "body2" | "caption
   )
 }
 
-export  const BlogTemplate: React.FC<BlogTemplateProps>= (props) => {
+const TechStackBox: React.FC<{tech: TechStack, variant: "body2" | "caption"}> = (props) => {
+    return (
+        <Button sx={{
+        backgroundColor: "green",
+        borderRadius: "25px",
+        padding: "2px",
+        paddingLeft: "2%",
+        color: "white",
+        margin: "0px",
+        }}>
+        <Typography  variant={props.variant}>{props.tech}</Typography>
+        </Button>
+    )
+    }
+
+export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const navigate = useNavigate();
@@ -51,9 +67,32 @@ export  const BlogTemplate: React.FC<BlogTemplateProps>= (props) => {
           <Typography gutterBottom variant={isMobile?  "h3" :  "h2"} component="div">
             {props.title}
           </Typography>
+          <Divider/>
+          <Box display={"flex"}>
+            <Box>
+                <Typography variant="h3" color="text.secondary">
+                    Summary
+                </Typography>
           <Typography variant="body1" color="text.secondary">
             {props.summary}
           </Typography>
+            </Box>
+          <Box marginLeft={"2%"}>
+          <Typography variant="h3" color="text.secondary">
+                    Tech Stack
+                </Typography>
+            <Box sx={{  
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-end",
+                gap: theme.spacing(1),
+              }}>
+                {props.techStack.map((tech) => (
+                <TechStackBox tech={tech} variant={isMobile ? "caption": "body2"}/>
+                ))}
+            </Box>
+          </Box>
+            </Box>
         </CardContent>
         <CardActions>
           <Box display={"flex"} justifyContent={"space-between"} width={"100%"}>

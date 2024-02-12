@@ -45,7 +45,7 @@ const ProjectsHome = () => {
 
                 }}>
                 <Button size="small"
-                    onClick={() => navigate("/blog")}
+                    onClick={() => navigate("/projects")}
                     sx={{
                     color: "white",
                     backgroundColor:"black",

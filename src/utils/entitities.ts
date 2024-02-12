@@ -12,3 +12,19 @@ export enum BlogCategory {
     PracticalMachineLearning = "Practical Machine Learning",
     TheoreticalMachineLearning = "Theoretical Machine Learning",
 }
+
+export enum TechStack {
+    Python = "Python",
+    PyTorch = "PyTorch",
+    TensorFlow = "TensorFlow",
+    Keras = "Keras",
+    FastAPI = "FastAPI",
+    Docker = "Docker",
+    Azure = "Azure",
+    GoogleCloud = "Google Cloud",
+    TypeScript = "TypeScript",
+    JavaScript = "JavaScript",
+    Golang = "Golang",
+    React = "React",
+    Java = "Java",
+}
