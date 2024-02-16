@@ -17,6 +17,7 @@ export interface ProjectTemplateProps {
   summary: string;
   categories: BlogCategory[]; 
   id: number
+  link: string
   
 } 
 
@@ -26,7 +27,6 @@ const CategoryBox: React.FC<{category: BlogCategory, variant: "body2" | "caption
       backgroundColor: "lightblue",
       borderRadius: "25px",
       padding: "2px",
-      paddingLeft: "2%",
       color: "white",
       margin: "0px",
     }}>
@@ -41,7 +41,6 @@ const TechStackBox: React.FC<{tech: TechStack, variant: "body2" | "caption"}> = 
         backgroundColor: "green",
         borderRadius: "25px",
         padding: "2px",
-        paddingLeft: "2%",
         color: "white",
         margin: "0px",
         }}>
@@ -57,7 +56,7 @@ export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
 
     return (
       <Card sx={{minWidth:"100%", minHeight:"100%"}}>
-        <CardActionArea onClick={() => navigate("/blog/" + props.id)}>
+        <CardActionArea onClick={() => window.open(props.link, "_blank")}>
         <CardMedia
           sx={{ height: 140 }}
           image={props.img}
@@ -68,23 +67,20 @@ export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
             {props.title}
           </Typography>
           <Divider/>
-          <Box display={"flex"}>
-            <Box>
-                <Typography variant="h3" color="text.secondary">
-                    Summary
-                </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Box display={"flex"} marginBottom={"2%"}>
+            <Box marginTop={"1%"}>
+               
+          <Typography variant="body1" color="text.secondary" textAlign={"justify"}>
             {props.summary}
           </Typography>
             </Box>
-          <Box marginLeft={"2%"}>
-          <Typography variant="h3" color="text.secondary">
-                    Tech Stack
-                </Typography>
+            </Box>
+            <Divider/>
+            <Box marginTop={"2%"}>
+         
             <Box sx={{  
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "flex-end",
                 gap: theme.spacing(1),
               }}>
                 {props.techStack.map((tech) => (
@@ -92,12 +88,13 @@ export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
                 ))}
             </Box>
           </Box>
-            </Box>
         </CardContent>
-        <CardActions>
+        <CardActions sx={{
+            alignSelf: "flex-end"
+        }}>
           <Box display={"flex"} justifyContent={"space-between"} width={"100%"}>
             <Box>
-          <Button size="small" onClick={() => navigate("/blog/" + props.id)}>
+          <Button size="small"onClick={() => window.open(props.link, "_blank")}>
             <Typography variant={"body1"}>Read  More</Typography>
             {!isMobile && <ArrowForwardIcon fontSize="small"/>}
           </Button>
