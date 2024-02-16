@@ -132,7 +132,7 @@ const ProjectView = () => {
                     },
                     cursor: "pointer",
                     display: "flex",
-                    gridColumn: isMobile ? "span 3" : "span 3",
+                    gridColumn: (isMobile || isTablet) ? "span 6" : "span 3",
                     gridRow: "span 1",
                  
                     alignItems: "start",
