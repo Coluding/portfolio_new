@@ -79,7 +79,7 @@ export const projects: ProjectTemplateProps[] = [
     {
         img: "https://img.freepik.com/fotos-kostenlos/verkehrszeichen-auf-der-strasse_1139-255.jpg?1&w=996&t=st=1708107106~exp=1708107706~hmac=da7911515c608f20303db1a28f8ec1dd55f425357f2ed3a8dc92ab919de1369c",
         title: "YoloV1 from scratch: Traffic Signs",
-        summary: "This project implements a YoloV1 model for traffic sign detection. The model is trained on a dataset of traffic sign images and learns to detect traffic signs in images. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a practical application of YoloV1 models and aims to provide insights into their performance in traffic sign detection. ",
+        summary: "This project implements a YoloV1 model for traffic sign detection. The model is trained on a dataset of traffic sign images and learns to detect traffic signs in images. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a theoretical application of YoloV1 models and aims to help me understand the Yolo algorithm. ",
         link: "https://www.kaggle.com/code/strangetravel/yolov1-from-scratch-traffic-signs",
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning,],
         techStack: [TechStack.Python, TechStack.PyTorch],
