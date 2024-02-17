@@ -1,6 +1,5 @@
 import {Box, Typography, useTheme, Divider, useMediaQuery, CardActionArea} from "@mui/material";
 import * as React from 'react';
-import { useNavigate } from "react-router-dom";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -52,8 +51,6 @@ const TechStackBox: React.FC<{tech: TechStack, variant: "body2" | "caption"}> = 
 export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const navigate = useNavigate();
-
     return (
       <Card sx={{minWidth:"100%", minHeight:"100%"}}>
         <CardActionArea onClick={() => window.open(props.link, "_blank")}>
