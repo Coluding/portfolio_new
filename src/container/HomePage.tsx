@@ -9,7 +9,7 @@ import AboutMe from '../components/AboutMe';
 import Skills from '../components/Skills';
 import BlogHome from '../components/BlogHome';
 import ProjectsHome from '../components/ProjectsHome.js';
-import Socials from '../components/Socials.js';
+import Contact from '../components/Contact';
 import {ResponsiveBox} from '../components/ResponsiveElements.js';
 import background from "../assets/networking_video.mp4";
 
@@ -199,16 +199,8 @@ const HomePage = () => {
                             fontSize: theme.typography.body1.fontSize
                         }} >Projects</Button>
                         </Link>
-                        <Link to="socials" smooth={true} duration={1000} color="white">
-                        <Button sx={{
-                            color: "white",
-                            "&:hover": {
-                                color: "black",
-                                backgroundColor: "white"
-                            },
-                            fontSize: theme.typography.body1.fontSize
-                        }} >Socials</Button>
-                        </Link>
+                    
+                     
                         <Link to="contact" smooth={true} duration={1000} color="white"  offset={offset}>
                         <Button sx={{
                             color: "white",
@@ -258,10 +250,9 @@ const HomePage = () => {
                     <ProjectsHome/>
                     </Box>
                     </Fade>
-                    
                     <Fade in={displayBlog} timeout={1500}>
-                    <Box id="socials" marginTop={"0%"} >
-                    <Socials/>
+                    <Box id="contact" marginTop={"0%"} >
+                    <Contact/>
                     </Box>
                     </Fade>
                     </Box>                      

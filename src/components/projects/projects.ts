@@ -33,7 +33,7 @@ export const projects: ProjectTemplateProps[] = [
         img: "https://img.freepik.com/fotos-kostenlos/eine-darstellung-eines-auges_1268-26991.jpg?w=1060&t=st=1708106019~exp=1708106619~hmac=acd89be11a20a3ae09a101d1c65fadd82542dca8b554286cf65fd6d71aab2e74",
         title: "RetinaNet Imlpementation",
         summary: "This project implements the RetinaNet model, a state-of-the-art object detection model that excels in detecting small objects. It's a single-stage model that's faster and more accurate than its two-stage counterparts, making it ideal for real-time applications. The repository includes a comprehensive implementation of the model, complete with training and evaluation code, as well as a variety of pre-trained models. It also features a detailed README file.",
-        link: "https://github.com/Coluding/DeepLearningCollection/tree/main/src/computer_vision/object_detection/center_point_detection",
+        link: "https://github.com/Coluding/RetinaNet",
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 4,

@@ -28,7 +28,7 @@ const Socials = () => {
         
             <Box fontSize={theme.typography.h3.fontSize}>
                 </Box>
-               <Box display={"flex"} flexDirection={"row"} gap={"10%"}>
+               <Box display={"flex"} flexDirection={"column"} gap={"10%"}>
                 <Box>
                 <Link to={"https://www.linkedin.com/in/lukas-bierling-a2a6a4201/"} target="_blank">
                     <FontAwesomeIcon icon={faLinkedin}
@@ -37,8 +37,8 @@ const Socials = () => {
                     bounce={linkedinHover}
                     
                     style={
-                        {width:"30%",
-                        height:"30%",
+                        {width:"10%",
+                        height:"10%",
                         color:"black"}}/>
                 </Link>
                 <Typography variant="h3">LinkedIn</Typography>
@@ -50,8 +50,8 @@ const Socials = () => {
                     onMouseLeave={() => setGithubHover(false)}
                     bounce={githubHover}
                     style={
-                        {width:"30%",
-                        height:"30%",
+                        {width:"10%",
+                        height:"10%",
                         color:"black"}}/>
                 </Link>
                 <Typography variant="h3">Github</Typography>
@@ -64,8 +64,8 @@ const Socials = () => {
                     onMouseLeave={() => setKaggleHover(false)}
                     bounce={kaggleHover}
                     style={
-                        {width:"30%",
-                        height:"30%",
+                        {width:"10%",
+                        height:"10%",
                         color:"black"}}/>
                 </Link>
                 <Typography variant="h3">Kaggle</Typography>
