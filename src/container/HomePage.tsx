@@ -42,7 +42,7 @@ const HomePage = () => {
 
     useEffect(() => {
         console.log(opacity)
-        const threshold = isMobile ? 0.12 : 0.01;
+        const threshold = isMobile ? -0.5: -0.03;
         if (opacity < threshold){
             setDisplayAbout(true)
             
@@ -52,7 +52,7 @@ const HomePage = () => {
     }, [opacity]);
 
     useEffect(() => {
-        const threshold = isMobile ? 0.09 : -0.1;
+        const threshold = isMobile ?  -2: -0.3;
         if (opacity < threshold){
             setDisplaySkills(true)
            
@@ -64,7 +64,7 @@ const HomePage = () => {
     }, [opacity]);
 
     useEffect(() => {
-        const threshold = isMobile ? -0.1 : -1.5;
+        const threshold = isMobile ? -4: -0.8;
         if (opacity < threshold){
             setDisplayBlog(true)
         } else {
