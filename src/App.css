@@ -5,6 +5,15 @@
   text-align: center;
 }
 
+html {
+  transform: scale(0.8);
+  transform-origin: top left;
+}
+body {
+  width: 125%;
+  height: 125%;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
