@@ -9,6 +9,7 @@ import { TypeAnimation } from "react-type-animation";
 import myself from "../assets/me.jpg";
 import cv from "../assets/lebenslauf.pdf";
 import ba from "../assets/BA_kein_deckblatt.pdf";
+import cv_german from "../assets/lebenslauf_deutsch.pdf";
 
 
 const AboutMe = () => {
@@ -131,10 +132,17 @@ const AboutMe = () => {
             </Button>
             <Button
               variant="contained"
+              href={cv_german}
+              download="lukas-bierling-cv-german.pdf"
+            >
+              Download CV German
+            </Button>
+            <Button
+              variant="contained"
               href={ba}
               download="lukas-bierling-thesis.pdf"
             >
-            Bachelor thesis
+            Download Bachelor thesis
             </Button>
           </Box>
         </Box>
