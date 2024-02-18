@@ -3,7 +3,7 @@ import { ProjectTemplateProps } from "./ProjectTemplate";
 
 export const projects: ProjectTemplateProps[] = [
     {
-        img: "https://img.freepik.com/fotos-kostenlos/bild-eines-autounfalls-mit-zwei-autos_613910-929.jpg?w=996&t=st=1708104709~exp=1708105309~hmac=1ca911dbc32a04128cb529cddba2b8b57ad562bdb8ffb02ff1e1508c7b55573e",
+        img: "image-auto-accident-involving-two-cars.jpg",
         title: "Crash detection with Class Activation Maps",
         summary:"I've engineered a sophisticated machine learning model that specializes in distinguishing between crash and non-crash car images. To enhance its interpretability, I integrated Class Activation Mapping (CAM), allowing the model to visually indicate the areas in images where crashes are detected. My tech stack of choice was PyTorch, and I undertook extensive experiments with an assortment of models and hyperparameters to optimize performance. Further I built a Docker container. However, the hosting of the container is too expensive for me, so I am currently looking for a free alternative",
         link: "https://github.com/Coluding/Car-crash-detection-with-CAM",
@@ -12,7 +12,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 1,
     },
     {
-        img: "https://img.freepik.com/vektoren-kostenlos/partikel-gesicht-tech-hintergrund_23-2148309417.jpg?w=996&t=st=1708105537~exp=1708106137~hmac=b69126c76c94bd2616cebde852b605b5814965c3ce91000654ac393fbaa70812",
+        img: "2960599.jpg",
         title: "Deep Learning Code Collection",
         summary: "I am creating a comprehensive collection of deep learning code snippets that I've used in various projects. The collection includes code for data preprocessing, model training, and model evaluation. I've also included code for visualizing model performance and for deploying models. The collection is improved and expanded on a regular basis.", 
         link: "https://github.com/Coluding/DeepLearningCollection",
@@ -21,7 +21,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 2,
     },
     {
-        img: "https://img.freepik.com/vektoren-kostenlos/bogenschiessziel-mit-pfeilen-archer-sport-game-competition_460848-14247.jpg?w=826&t=st=1708105860~exp=1708106460~hmac=2b099f05b5ffb007d5c383974f2504913c05171eb7b7467f3d13abcdbcfaf525",
+        img: "5060.jpg",
         title: "Center Point based Object Detection",
         summary: "This project introduces Center Point Detection models, a cutting-edge approach to object detection that eschews traditional bounding boxes in favor of pinpointing objects' exact center points. This technique is more accurate, efficient, and suitable for irregularly shaped objects, offering precise localization without the computational burden of bounding box calculations. It shines in applications requiring precise object counts, keypoint detection, or monitoring, such as human pose estimation, facial landmark detection, and aerial vehicle tracking. However, it's less effective for tasks needing size or scale information. The repository includes examples like detecting sports fields and counting lanes on a running track in satellite images, demonstrating its utility across various scenarios. It encourages exploration of its models and documentation for anyone looking to leverage precise object detection in their projects.",
         link: "https://github.com/Coluding/DeepLearningCollection/tree/main/src/computer_vision/object_detection/center_point_detection",
@@ -30,7 +30,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 3,
     },
     {
-        img: "https://img.freepik.com/fotos-kostenlos/eine-darstellung-eines-auges_1268-26991.jpg?w=1060&t=st=1708106019~exp=1708106619~hmac=acd89be11a20a3ae09a101d1c65fadd82542dca8b554286cf65fd6d71aab2e74",
+        img: "3571486.jpg",
         title: "RetinaNet Imlpementation",
         summary: "This project implements the RetinaNet model, a state-of-the-art object detection model that excels in detecting small objects. It's a single-stage model that's faster and more accurate than its two-stage counterparts, making it ideal for real-time applications. The repository includes a comprehensive implementation of the model, complete with training and evaluation code, as well as a variety of pre-trained models. It also features a detailed README file.",
         link: "https://github.com/Coluding/RetinaNet",
@@ -39,7 +39,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 4,
     },
     {
-        img: "https://img.freepik.com/fotos-kostenlos/eine-studioportrait-collage-unterschiedlicher-menschen_53876-137629.jpg?w=996&t=st=1708106305~exp=1708106905~hmac=ab3d7ed5c1347d7f332bdb73acafba0fdcb050ef27e786aeb5f2642b807ba037",
+        img: "eine-studioportrait-collage-unterschiedlicher-menschen.jpg",
         title: "Face Similarity Detection with Siamese Networks",
         summary: "This project implements a Siamese Network for face similarity detection. The model is trained on a dataset of face images and learns to distinguish between similar and dissimilar faces. The notebook includes code for data preprocessing, model training, and model evaluation. This was a more theoretical project, where I wanted to understand the concept of Siamese Networks and how they can be used for face similarity detection.",
         link: "https://www.kaggle.com/code/strangetravel/facial-recog-siamese-network",
@@ -48,7 +48,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 5,
     },
     {
-        img: "https://img.freepik.com/fotos-kostenlos/volle-schussfrau-mit-den-haenden-auseinander_23-2149600338.jpg?w=996&t=st=1708106506~exp=1708107106~hmac=54cd0d69077a863a59149c7b0f21dce2a83602c617a2ba2f5db99d684f50275d",
+        img: "6157.jpg",
         title: "Human Body Segmentation: A comparison of DeepLabV3 and DeepLabV3+ as well as Unet",
         summary: "This project compares the performance of DeepLabV3, DeepLabV3+, and Unet in human body segmentation. The models are trained on a dataset of human body images and evaluated based on their segmentation accuracy. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a practical application of semantic segmentation models and aims to provide insights into their performance in human body segmentation." +
         "After training with a pure Dice Loss, I also trained the models with a combination of Dice Loss and Cross Entropy Loss. The results were quite interesting and I was able to improve the performance of the models.",
@@ -58,7 +58,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 6,
     },
     {
-        img: "https://img.freepik.com/vektoren-kostenlos/futuristischer-technologischer-hintergrund_23-2148475044.jpg?w=996&t=st=1708106611~exp=1708107211~hmac=4d553cf23e99b8661dd09a3d52ab40c8fc9584d3d16028a00a3b6e0c78ad3547",
+        img: "26062.jpg",
         title: "Vision Transformer Implementation from scratch",
         summary: "This project implements a Vision Transformer model for image classification. The model is trained on a dataset of images and learns to classify them into different categories. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a theoretical exploration of Vision Transformer models and aims to provide insights into their performance in image classification. "+
         "I explained how the Vision Transformer is dependent on a lot of data and how it is not as efficient as Convolutional Neural Networks for smaller datasets. However, I also showed that the Vision Transformer can be used for image classification and that it is a powerful model for large datasets.",
@@ -68,7 +68,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 7,
     },
     {
-        img: "https://img.freepik.com/fotos-kostenlos/eine-vogelperspektive-von-shanghai_1127-3935.jpg?w=996&t=st=1708106801~exp=1708107401~hmac=8bb4e0b422c5525d58c48e7dd04b8c3c4a8ac84eb265cee88dceff1672c86996",
+        img: "eine-vogelperspektive-von-shanghai.jpg",
         title: "Building Segmentation with U-Net",
         summary: "This project implements a U-Net and DeepLab model for building segmentation. The models are trained on a dataset of satellite images and learns to segment buildings from the background. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a practical application of U-Net models and aims to provide insights into their performance in building segmentation. ",
         link: "https://www.kaggle.com/code/strangetravel/building-segmenation-unet-vs-deeplab#4.-Build-DeepLab-v3-model-using-atrous-convolution",
@@ -77,7 +77,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 8,
     },
     {
-        img: "https://img.freepik.com/fotos-kostenlos/verkehrszeichen-auf-der-strasse_1139-255.jpg?1&w=996&t=st=1708107106~exp=1708107706~hmac=da7911515c608f20303db1a28f8ec1dd55f425357f2ed3a8dc92ab919de1369c",
+        img: "verkehrszeichen-auf-der-strasse.jpg",
         title: "YoloV1 from scratch: Traffic Signs",
         summary: "This project implements a YoloV1 model for traffic sign detection. The model is trained on a dataset of traffic sign images and learns to detect traffic signs in images. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a theoretical application of YoloV1 models and aims to help me understand the Yolo algorithm. ",
         link: "https://www.kaggle.com/code/strangetravel/yolov1-from-scratch-traffic-signs",
@@ -86,7 +86,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 9,
     },
     {
-        img: "https://img.freepik.com/fotos-kostenlos/maennlicher-arzt-der-roentgenbild-untersucht_329181-618.jpg?w=996&t=st=1708107278~exp=1708107878~hmac=d37b70dc5764c810095aa291fdfdb23692f2c627a9834d490a3b1899937d7d5c",
+        img:"rueckansicht-des-arztes-der-radiographie-betrachtet.jpg",
         title: "ResNet18 Covid19 Classifications",
         summary: "This project implements a ResNet18 model for Covid19 classifications. The model is trained on a dataset of X-Ray images and learns to classify them into different categories. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a practical application of ResNet18 models and aims to provide insights into their performance in Covid19 classifications. ",
         link: "https://www.kaggle.com/code/strangetravel/resnet18-covid19-classifications",
@@ -95,7 +95,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 10,
     },
     {
-        img: "https://img.freepik.com/fotos-kostenlos/nationalmuseum-fuer-geschichte-rumaeniens_1268-14722.jpg?w=996&t=st=1708107643~exp=1708108243~hmac=65524a475ce1c024aae60f12ae255b3c8e04ecf1c42a6d540725a92e04a97ae5",
+        img: "nationalmuseum-fuer-geschichte-rumaeniens.jpg",
         title: "Topic Modeling with LDA",
         summary: "This project implements a Latent Dirichlet Allocation (LDA) model for topic modeling. The model is trained on a dataset of central bank speeches and learns to classify them into different categories. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a practical application of LDA models and aims to provide insights into their performance in topic modeling. " + 
         "It is also valubale for me to help me understand the concept of topic modeling and how it can be used for text classification.",
@@ -133,6 +133,18 @@ export const projects: ProjectTemplateProps[] = [
         techStack: [TechStack.Python, TechStack.PyTorch, TechStack.Azure],
         id: 14,
     },
-
+    {
+        img: "302401236-aa54af4b-4fc7-4a88-b792-c10222bd28d6.png",
+        title: "Full Stack Application for renewable energy management",
+        link: "https://github.com/Coluding/GreenEcoHub",
+        summary: "This application offers a variety of interaction possibilities for all actors involved in the process of using renewable energy." +
+        "Network operators can offer tarifs and access smart meter data, while households can access their smart meter data and compare different tarifs. Households can manage their PV systems with the energy consultants and solar engineers." +
+        "There are various features such as a calendar, a chat between users, a dashboard for the admin to manage all the users, a map to display all the households, smart meter diagrams and much more." +
+        "The app was build with React, Typescript  and Vite with Material UI in the Frontend, while for the Backend I opted for Python and FastAPI. FastAPI is one of my favorite Backend frameworks, because it  offers a highly effcient asynchronous Backend while being relatively easy to develop"+
+        "To manage the database I used Alembic with its migration capabilites. Deployment was done using Docker and some shell scripts to execute Docker and Alembic commands correctly.",
+        categories: [BlogCategory.Frontend, BlogCategory.Backend, BlogCategory.WebDevelopment, BlogCategory.Infrastructure],
+        techStack: [TechStack.Python, TechStack.TypeScript, TechStack.JavaScript, TechStack.Docker, TechStack.React],
+        id: 15
+    }
 
 ]

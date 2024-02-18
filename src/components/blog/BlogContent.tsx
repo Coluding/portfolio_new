@@ -12,9 +12,9 @@ const MathBlog= () => {
   const {id} = useParams();
   const blog = blogs.find(blog => blog.id === parseInt(id || ""));
   return (
-    <Box margin={"3%"}>
+    <Box margin={"0%"}>
       <Fade  in={true} timeout={1500}>
-      <Box >
+      <Box paddingLeft={"15%"} paddingRight={"15%"} paddingTop={"2%"} paddingBottom={"10%"}>
       {blog && (
         <>
           <Typography variant={"h4"} sx={{textAlign: "center", padding: theme.spacing(2)}}>{blog.title}</Typography>

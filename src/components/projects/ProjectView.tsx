@@ -1,4 +1,4 @@
-import { Box, useTheme, Divider, Typography, Grow, Paper, useMediaQuery } from "@mui/material";
+import { Box, useTheme, Divider, Typography,Chip,  TextField, Grow, Paper, Autocomplete , useMediaQuery } from "@mui/material";
 import α from 'color-alpha';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useState } from "react";
@@ -31,7 +31,9 @@ const ProjectView = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     const [categories, setCategories] = useState<string[]>([]);
+    const [titles, setTitles] = useState<string[]>([]);
     const [filteredProjects, setFilteredProjects] = useState(projects);
+    
 
     useEffect(() => {
         if (categories.length === 0) {
@@ -46,6 +48,18 @@ const ProjectView = () => {
           );
         }
       }, [categories]);
+    
+      useEffect(() => {
+        if (categories.length === 0 && titles.length === 0) {
+          setFilteredProjects(projects);
+        } else {
+          setFilteredProjects(
+            projects.filter((project) =>
+              (titles.length === 0 || titles.some(title => project.title === title)),
+            ),
+          );
+        }
+      }, [titles])
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -59,6 +73,13 @@ const ProjectView = () => {
           typeof value === 'string' ? value.split(',') : value,
         );
       };
+
+      const handleChangeTitle = (event: any, newValue: any) => {
+        event
+        setTitles(newValue);
+      }
+    
+    
 
     return (
         <Box display={"flex"} flexDirection={"column"}
@@ -89,11 +110,43 @@ const ProjectView = () => {
                 </Box>
             <Divider sx={{ width: '100%'}}></Divider>
             </Box>
-            <Box display={"flex"} justifyContent={"center"} 
+            <Box display={"flex"} justifyContent={"space-evenly"} 
             sx={{
                 backgroundColor: "white",
     
             }}>
+               <FormControl sx={{ m: 2, width: "50%" }}>
+       
+               <Autocomplete
+  multiple
+  id="filter-category"
+  options={filteredProjects.map((project) => project.title)}
+  getOptionLabel={(option) => option}
+  value={titles}
+  onChange={handleChangeTitle}
+  filterSelectedOptions
+  renderTags={(value, getTagProps) =>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', overflowX: 'auto' }}>
+      {value.map((option, index) => (
+        <Chip
+          variant="outlined"
+          label={option}
+          {...getTagProps({ index })}
+          // Adjust the Chip style as needed, considering the container's new behavior
+          style={{ fontSize: '0.875rem', height: 'auto', maxWidth: '100%' }}
+        />
+      ))}
+    </div>
+  }
+  renderInput={(params) => (
+    <TextField
+      {...params}
+      label="Search title"
+      placeholder="Search title"
+    />
+  )}
+/>
+      </FormControl>
             <FormControl sx={{ m: 2, width: "50%" }}>
         <InputLabel id="demo-multiple-name-label">Filter category</InputLabel>
         <Select
