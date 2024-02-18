@@ -56,7 +56,7 @@ export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
         <CardActionArea onClick={() => window.open(props.link, "_blank")}>
         <CardMedia
           sx={{ height: 140 }}
-          image={new URL("../../assets/" + props.img, import.meta.url).href }
+          image={new URL( "/assets/" + props.img, import.meta.url).href }
           title={props.title}
         />
         <CardContent>
