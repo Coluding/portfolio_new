@@ -4,6 +4,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 import myself from "../assets/me.jpg";
 import cv from "../assets/lebenslauf.pdf";
@@ -60,7 +61,7 @@ const AboutMe = () => {
                 textAlign: "center",
                 }}>
                 <Box fontSize={theme.typography.body2.fontSize}>
-                    <Paper elevation={5}>
+                    <Paper elevation={3}>
                 <Accordion   sx={{
                 backgroundColor: "white",
                 border: "1px solid white",  
@@ -71,20 +72,32 @@ const AboutMe = () => {
                 <AccordionSummary
                 onClick={() => setExpanded(!expanded)}
                 expandIcon={<ExpandMoreIcon />}>
-                    {expanded &&
-                <Typography textAlign={"justify"}>
-                Expand to display more...    
-                </Typography>
-                }
-                
-                </AccordionSummary>
-                <AccordionDetails>
-                <Typography textAlign={"justify"}>
+                    <Box display={"flex"} flexDirection={"column"}>
+                    <Typography textAlign={"justify"}>
                          I'm currently studying  Computer Science, Information Systems, and Business Administration. My focus is set on Machine Learning.
                         For my Bachelor's thesis, I explored possibilities to make Transformer models more efficient for analyzing financial texts, especially when you don't have a lot of computing resources. 
                         I am generally very interested in the AI, especially Computer Vision and Natural Language Processing.
                         I am fascinated by how AI algorithms work and therefore want to understand and study them in depth.
                         <br/>
+                    </Typography>
+                    {expanded &&
+                    <Box 
+                    fontSize={isMobile ? theme.typography.body1.fontSize : theme.typography.h3.fontSize}
+                    fontWeight={"bold"}
+                    >
+                <TypeAnimation
+            
+                cursor={true}
+                sequence={["Expand to see more...", 1000 ]}
+                repeat={0}
+            />
+            </Box>
+                }
+                </Box>
+                
+                </AccordionSummary>
+                <AccordionDetails>
+                <Typography textAlign={"justify"}>
                         In my job, I work as a Machine Learning Engineer and Full Stack Developer at a consulting company. 
                         Here, I use what I've learned about software development and machine learning to solve real-world problems.
                         <br/><br/>
