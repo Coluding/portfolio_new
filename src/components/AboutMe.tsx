@@ -122,7 +122,7 @@ const AboutMe = () => {
             marginTop: theme.spacing(2),
              display:"flex", 
              gap:"10px",
-             justifyContent:"space-evenly"}}>
+             justifyContent:"center"}}>
             <Button
               variant="contained"
               href={cv}
@@ -135,14 +135,14 @@ const AboutMe = () => {
               href={cv_german}
               download="lukas-bierling-cv-german.pdf"
             >
-              Download CV German
+              German CV
             </Button>
             <Button
               variant="contained"
               href={ba}
               download="lukas-bierling-thesis.pdf"
             >
-            Download Bachelor thesis
+            Bachelor thesis
             </Button>
           </Box>
         </Box>
