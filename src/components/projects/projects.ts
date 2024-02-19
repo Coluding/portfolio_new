@@ -105,7 +105,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 11,
     },
     {
-        img: "https://img.freepik.com/fotos-kostenlos/tafel-mit-wissenschaftlichen-formeln-und-berechnungen-beschriftet_1150-19413.jpg?w=996&t=st=1708107680~exp=1708108280~hmac=b2e49e047c65a78c2b11a254ce52d18faf43b7a40c9c682272c0fc9431d907d7",
+        img: "3665587.jpg",
         title: "Text Rank Implementation from scratch",
         summary: "This project implements a Text Rank model for text summarization. The model was implemented from scratch using markov chains and eigenvalue theory. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a theoretical exploration of Text Rank models and aims to provide insights into their performance in text summarization and how the math works in the back. ",
         link: "https://www.kaggle.com/code/strangetravel/text-rank-self-implemented",
@@ -114,7 +114,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 12,
     },
     {
-        img: "https://img.freepik.com/fotos-kostenlos/fotorealistische-wolken-und-staedte_23-2151058812.jpg?w=900&t=st=1708107918~exp=1708108518~hmac=3c20f961e7a861f70d77b9cd5edff6294abcab649e7c592f1a41fdfaf2f6bc8b",
+        img: "fotorealistische-wolken.jpg",
         title: "Cloud Segmentation with U-Net",
         summary: "This project implements a U-Net model for cloud segmentation. The model is trained on a dataset of satellite images and learns to segment clouds from the background." +
         " The notebook includes code for data preprocessing, model training, and model evaluation. The project is a practical application of U-Net models and aims to provide insights into their performance in cloud segmentation. " + 
@@ -125,7 +125,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 13,
     },
     {
-        img: "https://img.freepik.com/vektoren-kostenlos/isometrische-ikone-der-computertechnologie-serverraum-satz-des-digitalen-geraetes-element-fuer-design-pc-laptop_39422-1026.jpg?w=996&t=st=1708108112~exp=1708108712~hmac=dde036b0296bc0dd4003c58c793a9f7c4d284d3886338855b638d65d47b760fe",
+        img: "1026.jpg",
         title: "Framework for Azure PyTorch Model Training",
         summary: "This project is a framework for training PyTorch models on Azure. It includes code for setting up an Azure Machine Learning workspace, creating a compute cluster, and running model training experiments. The framework is designed to streamline the process of training PyTorch models on Azure and to provide a foundation for building scalable machine learning pipelines. The repository includes a detailed README file and a sample PyTorch model for demonstration purposes.",
         link: "https://github.com/Coluding/azure-pytorch-model-training",
@@ -145,6 +145,21 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.Frontend, BlogCategory.Backend, BlogCategory.WebDevelopment, BlogCategory.Infrastructure],
         techStack: [TechStack.Python, TechStack.TypeScript, TechStack.JavaScript, TechStack.Docker, TechStack.React],
         id: 15
+    },
+    {
+        img: "2884.jpg",
+        link: "https://github.com/Coluding/Assessing-Efficiency-in-Domain-Specific-Transformer-Models", 
+        title: "Assessing Efficiency in Domain Specific Transformer Models",
+        summary: "This repository contains the code for my Bachelor Thesis. It is a broad repository where I implement different types of attention mechanisms from scratch and make use of different existing attention based models." +
+        " I also implemented a new Transformer model, a reversible dilated BERT model. However its performance was not as good as I expected. Apart from that I implemented the Electra pretraining approach with different discriminator and generator models (m custom models and others like the Reformer) and compared the performance of the models."+
+        "Further I chose the best model for my specific use case, which was optimizing domain specific  pretraining with limited ressources and finetuned the discriminator model on financial text data." +
+        " I achieved fairly decent results and was able to show that the Electra pretraining approach is a good alternative to the BERT pretraining approach, especially when it comes to domain specific pretraining with limited ressources." +
+        " In the end I was able to learn a lot about the different attention mechanisms and how they can be used to optimize the performance of a model. I also learned a lot about the Electra pretraining approach and how it can be used to optimize domain specific pretraining." + 
+        " I used Pytorch and the Transformers library for the implementation of the models and the training of the models. I also used the Huggingface Datasets library to preprocess the data and to load the data into the model. The training was done on a single Titan V GPU.", 
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.PracticalMachineLearning, BlogCategory.Infrastructure, BlogCategory.NLP],
+        techStack: [TechStack.Python, TechStack.PyTorch],
+        id: 16
     }
+    
 
 ]

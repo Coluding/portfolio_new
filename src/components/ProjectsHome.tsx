@@ -29,7 +29,7 @@ const ProjectsHome = () => {
                         I have worked on a variety of projects in AI, Machine Learning and Software Development.
                         
                         My main research and project interests are in the field of <b>Natural Language Processing</b>, <b>
-                            Computer Vision</b> and <b>Reinforcement Learning</b>. The latter is a field I am currently learning more about, which will be documented in my blog.
+                            Computer Vision</b> and <b>Reinforcement Learning</b>. The latter is a field I am currently learning more about, which will be documented in my blog.   
                         
                         I am also interested in <b>Full Stack Development</b> and have worked on a variety of projects in this field.
                         <br/>
