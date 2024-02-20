@@ -3,7 +3,7 @@ import { BlogCategory } from "../../utils/entitities";
 
 export const blogs: BlogTemplateProps[] = [
     {
-        img: "https://images.unsplash.com/photo-1568952433726-3896e3881c65?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        img: "photo-1568952433726-3896e3881c65.jpg",
         title: "Locality Sensitive Hashing",
         summary: "Locality Sensitive Hashing (LSH) enhances attention mechanisms in machine learning, especially for tasks requiring the processing of long sequences, by addressing hardware limitations. Traditional attention mechanisms, crucial for understanding contextual relationships in data, face challenges with computational and memory demands, particularly in resource-constrained environments. LSH reduces these demands by grouping similar input elements, allowing attention to focus on relevant pairs and thus lowering computational complexity. This optimization facilitates the handling of larger datasets and complex tasks, such as text analysis and genome sequencing, on standard hardware, making advanced machine learning applications more accessible and scalable",
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.NLP],
@@ -37,16 +37,9 @@ export const blogs: BlogTemplateProps[] = [
         Once sorted, these query-key pairs are divided into segments, each containing $m$pairs. In cases where a bucket has more than $m$ pairs, a unique attending rule applies: a query in one segment can refer to all keys in the same bucket from the previous segment, but it cannot refer to keys outside its current segment. This rule, however, doesn't apply to other queries in the same bucket; they are not allowed to refer to a key that's outside their current segment. This method is illustrated in Figure 16.`,
         id: 2
     },
+   
     {
-        img: "https://img.freepik.com/fotos-kostenlos/3d-darstellung-von-blauem-und-lila-futuristischem-sci-fi-techno-licht-coolem-hintergrund_181624-57587.jpg?w=1060&t=st=1707435170~exp=1707435770~hmac=1dbdc12d3879b747bf2ed09a8a752c47657faf2486d74b141bc8995cb328fb8e",
-        summary: "This is a collection of deep learning code snippets that I have found useful in my work. These code snippets cover a wide range of topics, including data preprocessing, model training, and evaluation. I hope you find these code snippets useful in your work as well. If you have any questions or suggestions, please feel free to leave a comment below. I would love to hear from you!",
-        categories: [BlogCategory.WebDevelopment],
-        content: "to be added...",
-        title: "Deep Learning Code Collection",
-        id: 3
-    },
-    {
-        img: "https://img.freepik.com/vektoren-kostenlos/big-data-konzept-hintergrund_52683-24459.jpg?w=996&t=st=1707762812~exp=1707763412~hmac=bcd43fb2e93966f366732662889eb75ca975d8d2879eedd970eab1625834d636",
+        img: "3571486.jpg",
         summary: "Sliding-window attention is a novel attention mechanism that has been proposed to address the limitations of traditional attention mechanisms in machine learning. Traditional attention mechanisms, such as the scaled dot-product attention, have been shown to be computationally expensive and memory-intensive, particularly when processing long sequences. Sliding-window attention addresses these limitations by restricting attention to a fixed-size window around the attention token, thereby reducing the computational and memory demands of the attention mechanism. This optimization makes it possible to process longer sequences on standard hardware, making advanced machine learning applications more accessible and scalable.",
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.NLP],
         content: String.raw `To overcome the limitations imposed by the quadratic complexity of standard attention mechanisms, it is essential to sparsify the attention matrix. This entails to design a scheme whereby each token $x_i$ for $i \in {0, 1, \ldots, n}$ attends selectively to a subset of tokens indexed by $S_i \subseteq \{0, 1, \ldots, n\}$. Such an approach ensures that not every token is attended to by every other, thereby reducing the computational burden of each attention operation. This reduction introduces a critical trade-off: the smaller the size of $S_i$, the lower the computational cost, yet with the increasing risk of omitting interactions crucial for capturing the intended semantics of the input.\\
@@ -85,6 +78,17 @@ To ease the understanding in the following section, a set $H$ is defined which c
 where $W$ contains the window sizes $w_l$ for each layer $l$.`,
         title: "Sliding Window Attention Mechanism",
         id: 4
+    }, 
+    {
+        img: "126.jpg",
+        title: "Basics of Reinforcement Learning: Epsilon Greedy Algorithm, Optimistic Initial Values and Upper Confidence Bound",
+        summary: "Reinforcement learning is a type of machine learning that involves training an agent to make decisions within an environment in order to maximize some notion of cumulative reward. The agent learns to achieve a goal in an uncertain, potentially complex environment." +
+        " The agent is not told which actions to take, but instead must discover which actions yield the most reward by trying them out. In the most interesting and challenging cases, actions may affect not only the immediate reward but also the next situation and, through that, all subsequent rewards. These two characteristics -- trial-and-error search and delayed reward -- are the two most important distinguishing features of reinforcement learning. This trial and error paradigm is also known as the exploration-exploitation trade-off. The agent must exploit what it has already experienced in order to obtain reward, but it must also explore in order to make better action selections in the future. The agent must use a balance of exploration and exploitation to maximize its reward over time." +
+        "The epsilon-greedy algorithm, optimistic initial values and the upper confidence bound are three  basic strategies to address the exploration-exploitation trade-off in reinforcement learning.",
+        categories: [BlogCategory.ReinforcementLearning, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
+        content: "To be added...",
+        id: 5
+
     }
 
 ]

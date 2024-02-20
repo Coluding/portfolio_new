@@ -44,7 +44,7 @@ export  const BlogTemplate: React.FC<BlogTemplateProps>= (props) => {
         <CardActionArea onClick={() => navigate("/blog/" + props.id)}>
         <CardMedia
           sx={{ height: 140 }}
-          image={props.img}
+          image={new URL( "/assets/" + props.img, import.meta.url).href }
           title={props.title}
         />
         <CardContent>
