@@ -1,38 +1,76 @@
 import React from 'react';
 import Latex from 'react-latex';
+import { Typography } from '@mui/material';
+
 
 const parseAndRenderLatex = (inputText: string) => {
   const output = [];
   let currentPosition = 0;
-  let blockStart = inputText.indexOf('%block', currentPosition);
 
-  while (blockStart !== -1) {
+  while (currentPosition < inputText.length) {
+    let nextPosition = inputText.length;
+
+    // Check for a section command
+    const sectionStart = inputText.indexOf('\\section{', currentPosition);
+    let blockStart = inputText.indexOf('%block', currentPosition);
+
+    // Find the closest tag (section or block)
+    let closestTag = sectionStart !== -1 ? '\\section{' : '%block';
+    if (sectionStart !== -1 && blockStart !== -1) {
+      if (sectionStart < blockStart) {
+        closestTag = '\\section{';
+        nextPosition = sectionStart;
+      } else {
+        closestTag = '%block';
+        nextPosition = blockStart;
+      }
+    } else if (sectionStart !== -1) {
+      nextPosition = sectionStart;
+    } else if (blockStart !== -1) {
+      nextPosition = blockStart;
+    }
+
     // Add preceding text as inline LaTeX if there's any
-    if (blockStart > currentPosition) {
-      const inlineText = inputText.substring(currentPosition, blockStart);
+    if (nextPosition > currentPosition) {
+      const inlineText = inputText.substring(currentPosition, nextPosition);
       output.push(<Latex key={currentPosition}>{inlineText}</Latex>);
     }
 
-    const blockEnd = inputText.indexOf('%block', blockStart + 6);
-    if (blockEnd === -1) {
-      // No closing tag found, treat the rest as inline LaTeX
-      console.error('Unmatched %block tag');
+    if (closestTag === '\\section{') {
+      const sectionEnd = inputText.indexOf('}', sectionStart + 9);
+      if (sectionEnd === -1) {
+        console.error('Unmatched \\section tag');
+        break;
+      }
+
+      const sectionText = inputText.substring(sectionStart + 9, sectionEnd);
+      output.push(
+        <Typography key={sectionStart} variant="h3" fontWeight={"bold"} marginBottom={"2px"} >
+          {sectionText}
+        </Typography>
+      );
+
+      currentPosition = sectionEnd + 1;
+    } else if (closestTag === '%block') {
+      const blockEnd = inputText.indexOf('%block', blockStart + 6);
+      if (blockEnd === -1) {
+        console.error('Unmatched %block tag');
+        break;
+      }
+
+      // Extract block LaTeX content and add it as block LaTeX
+      const blockText = inputText.substring(blockStart + 6, blockEnd).trim();
+      output.push(<Latex key={blockStart} displayMode={true}>{blockText}</Latex>);
+
+      currentPosition = blockEnd + 6;
+    } else {
+      // No more special tags, add any remaining text as inline LaTeX
+      if (currentPosition < inputText.length) {
+        const remainingText = inputText.substring(currentPosition);
+        output.push(<Latex key={currentPosition}>{remainingText}</Latex>);
+      }
       break;
     }
-
-    // Extract block LaTeX content and add it as block LaTeX
-    const blockText = inputText.substring(blockStart + 6, blockEnd).trim();
-    output.push(<Latex key={blockStart} displayMode={true}>{blockText}</Latex>);
-
-    // Move current position past this block
-    currentPosition = blockEnd + 6;
-    blockStart = inputText.indexOf('%block', currentPosition);
-  }
-
-  // Add any remaining text as inline LaTeX
-  if (currentPosition < inputText.length) {
-    const remainingText = inputText.substring(currentPosition);
-    output.push(<Latex key={currentPosition}>{remainingText}</Latex>);
   }
 
   return output;

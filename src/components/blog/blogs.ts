@@ -7,7 +7,7 @@ export const blogs: BlogTemplateProps[] = [
         title: "Locality Sensitive Hashing",
         summary: "Locality Sensitive Hashing (LSH) enhances attention mechanisms in machine learning, especially for tasks requiring the processing of long sequences, by addressing hardware limitations. Traditional attention mechanisms, crucial for understanding contextual relationships in data, face challenges with computational and memory demands, particularly in resource-constrained environments. LSH reduces these demands by grouping similar input elements, allowing attention to focus on relevant pairs and thus lowering computational complexity. This optimization facilitates the handling of larger datasets and complex tasks, such as text analysis and genome sequencing, on standard hardware, making advanced machine learning applications more accessible and scalable",
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.NLP],
-        content: String.raw `One of the downsides of restricting attention to a fixed size of tokens around the attention token is that important long range tokens which may capture more relevant information than the tokens in the direct neighborhood will be thrown away, hence leading to a significant loss of information.
+        content: [String.raw `One of the downsides of restricting attention to a fixed size of tokens around the attention token is that important long range tokens which may capture more relevant information than the tokens in the direct neighborhood will be thrown away, hence leading to a significant loss of information.
         The Locality Sensitive Hashing (LSH) attention mechanism proposed by Kitaev et al. is another way to sparsify the attention matrix, however, instead of limiting attention to the direct neighborhood, it tries to compute attention only between somewhat "similar" tokens (\textcite{DBLP:journals/corr/abs-2001-04451:reformer}). 
         
         Since tokens are represented by high-dimensional embedding vectors inside the model, the goal is to formulate an algorithm that finds the $l$ nearest neighbors in high-dimensional spaces. 
@@ -34,15 +34,16 @@ export const blogs: BlogTemplateProps[] = [
         
         The process involves organizing queries by grouping them into buckets based on their hash values and arranging them in order within each bucket. To address the issue where a bucket might have a disproportionate number of queries compared to keys, the authors recommend normalizing each query vector $Q_j$ by its magnitude, setting $K_j = \frac{Q_j}{||Q_j||}$. This adjustment ensures that the hash values for the queries $Q_j$ and the keys $K_j$ match, leading to an equal distribution of queries and keys in each bucket.
         
-        Once sorted, these query-key pairs are divided into segments, each containing $m$pairs. In cases where a bucket has more than $m$ pairs, a unique attending rule applies: a query in one segment can refer to all keys in the same bucket from the previous segment, but it cannot refer to keys outside its current segment. This rule, however, doesn't apply to other queries in the same bucket; they are not allowed to refer to a key that's outside their current segment. This method is illustrated in Figure 16.`,
-        id: 2
+        Once sorted, these query-key pairs are divided into segments, each containing $m$pairs. In cases where a bucket has more than $m$ pairs, a unique attending rule applies: a query in one segment can refer to all keys in the same bucket from the previous segment, but it cannot refer to keys outside its current segment. This rule, however, doesn't apply to other queries in the same bucket; they are not allowed to refer to a key that's outside their current segment. This method is illustrated in Figure 16.`],
+        id: 2,
+        date: "2023-02-15",
     },
    
     {
         img: "3571486.jpg",
         summary: "Sliding-window attention is a novel attention mechanism that has been proposed to address the limitations of traditional attention mechanisms in machine learning. Traditional attention mechanisms, such as the scaled dot-product attention, have been shown to be computationally expensive and memory-intensive, particularly when processing long sequences. Sliding-window attention addresses these limitations by restricting attention to a fixed-size window around the attention token, thereby reducing the computational and memory demands of the attention mechanism. This optimization makes it possible to process longer sequences on standard hardware, making advanced machine learning applications more accessible and scalable.",
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.NLP],
-        content: String.raw `To overcome the limitations imposed by the quadratic complexity of standard attention mechanisms, it is essential to sparsify the attention matrix. This entails to design a scheme whereby each token $x_i$ for $i \in {0, 1, \ldots, n}$ attends selectively to a subset of tokens indexed by $S_i \subseteq \{0, 1, \ldots, n\}$. Such an approach ensures that not every token is attended to by every other, thereby reducing the computational burden of each attention operation. This reduction introduces a critical trade-off: the smaller the size of $S_i$, the lower the computational cost, yet with the increasing risk of omitting interactions crucial for capturing the intended semantics of the input.\\
+        content: [String.raw `To overcome the limitations imposed by the quadratic complexity of standard attention mechanisms, it is essential to sparsify the attention matrix. This entails to design a scheme whereby each token $x_i$ for $i \in {0, 1, \ldots, n}$ attends selectively to a subset of tokens indexed by $S_i \subseteq \{0, 1, \ldots, n\}$. Such an approach ensures that not every token is attended to by every other, thereby reducing the computational burden of each attention operation. This reduction introduces a critical trade-off: the smaller the size of $S_i$, the lower the computational cost, yet with the increasing risk of omitting interactions crucial for capturing the intended semantics of the input.\\
         The selection of the subset $S_i$ need not be static but can vary depending on the token at position $i$. Our objective is to find a set of positions $S_i$ for each token such that the resulting sparsified attention matrix closely approximates the full attention matrix in the best possible way.
         $$\\$$
         One way to sparsify the attention matrix is to use sliding windows as fixed pattern around the current token $x_i$. For a fixed window size $w$ each token attends to $\frac{w}{2}$ tokens on each side (\textcite{DBLP:journals/corr/abs-2004-05150:longformer}). The set $S_i$, representing the indices of tokens within the window of $x_i$, can be formalized as: 
@@ -75,9 +76,10 @@ To ease the understanding in the following section, a set $H$ is defined which c
 \begin{align*}
     H = \{W\}
 \end{align*}
-where $W$ contains the window sizes $w_l$ for each layer $l$.`,
+where $W$ contains the window sizes $w_l$ for each layer $l$.`],
         title: "Sliding Window Attention Mechanism",
-        id: 4
+        id: 4,
+        date: "2024-02-18",
     }, 
     {
         img: "126.jpg",
@@ -86,8 +88,18 @@ where $W$ contains the window sizes $w_l$ for each layer $l$.`,
         " The agent is not told which actions to take, but instead must discover which actions yield the most reward by trying them out. In the most interesting and challenging cases, actions may affect not only the immediate reward but also the next situation and, through that, all subsequent rewards. These two characteristics -- trial-and-error search and delayed reward -- are the two most important distinguishing features of reinforcement learning. This trial and error paradigm is also known as the exploration-exploitation trade-off. The agent must exploit what it has already experienced in order to obtain reward, but it must also explore in order to make better action selections in the future. The agent must use a balance of exploration and exploitation to maximize its reward over time." +
         "The epsilon-greedy algorithm, optimistic initial values and the upper confidence bound are three  basic strategies to address the exploration-exploitation trade-off in reinforcement learning.",
         categories: [BlogCategory.ReinforcementLearning, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
-        content: "To be added...",
-        id: 5
+        content: [String.raw `\section{Introduction} Reinforcement learning (RL) presents a unique challenge and opportunity in the field of machine learning. Agents in an RL environment must learn how to behave by interacting with their environment, aiming to achieve the highest possible cumulative reward. The core dilemma they face is the exploration-exploitation trade-off, where they must decide between exploiting known rewards and exploring new actions that might lead to higher rewards.`,
+        String.raw `\section{Epsilon Greedy} The epsilon-greedy algorithm is a straightforward yet effective approach to balance exploration and exploitation. With a probability of $1-\epsilon$, the agent selects the action that has the highest estimated reward based on past experiences (exploitation). With a probability of $\epsilon$, the agent randomly selects any action (exploration). This method ensures that the agent does not become overly focused on the actions that have worked in the past and remains open to exploring new possibilities. `,
+String.raw`\section{Optimistic Initial Value} Optimistic initial values is a technique where all actions are initially assigned a high reward estimate. This optimism encourages the agent to explore each action at least once, moving towards less explored actions with potentially higher rewards than what has been experienced so far. Over time, as the agent learns more about the real rewards of actions, these estimates are adjusted to reflect the true values.`,
+String.raw`\section{Upper Confidence Bound}The Upper Confidence Bound (UCB) algorithm tackles the exploration-exploitation dilemma by choosing the action that has the highest upper confidence bound on the estimated reward. The UCB for each action is calculated based on both the average reward of the action and the uncertainty or variance in its reward estimate. This approach ensures that actions are selected not just based on their average rewards but also considering the confidence level of those estimates, promoting a balance between exploring uncertain actions and exploiting known rewards.
+\begin{equation}
+    \text{UCB} = \bar{x}_j + \sqrt{\frac{2 \ln n}{n_j}}
+\end{equation}
+where $\bar{x}_j$ is the average reward of action $j$, $n$ is the total number of times any action has been selected, and $n_j$ is the number of times action $j$ has been selected.    
+The exploration-exploitation trade-off is a fundamental aspect of reinforcement learning, dictating the efficiency and effectiveness of the learning process. Strategies such as the epsilon-greedy algorithm, optimistic initial values, and the Upper Confidence Bound approach provide structured ways for agents to navigate this dilemma, balancing the need to maximize immediate rewards with the imperative to discover more rewarding actions over time.
+`],
+        id: 5,
+        date: "2024-02-20",
 
     }
 

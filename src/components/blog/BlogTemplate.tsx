@@ -15,8 +15,9 @@ export interface BlogTemplateProps {
   title: string;
   summary: string;
   categories: BlogCategory[]; 
-  content : string;
-  id: number
+  content : string[];
+  id: number;
+  date: string;
 } 
 
 const CategoryBox: React.FC<{category: BlogCategory, variant: "body2" | "caption"}> = (props) => {
