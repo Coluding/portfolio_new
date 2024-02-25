@@ -32,7 +32,7 @@ export const projects: ProjectTemplateProps[] = [
     {
         img: "3571486.jpg",
         title: "RetinaNet Imlpementation",
-        summary: "This project implements the RetinaNet model, a state-of-the-art object detection model that excels in detecting small objects. It's a single-stage model that's faster and more accurate than its two-stage counterparts, making it ideal for real-time applications. The repository includes a comprehensive implementation of the model, complete with training and evaluation code, as well as a variety of pre-trained models. It also features a detailed README file.",
+        summary: "This project implements the RetinaNet model, a state-of-the-art object detection model that excels in detecting small objects. It's a single-stage model that's faster and more accurate than its two-stage counterparts, making it ideal for real-time applications. The repository includes a comprehensive implementation of the model, complete with training and evaluation code, as well as a variety of pre-trained models. It also features a detailed README file. It was a rather theoretical project, where I wanted to understand the concept of RetinaNet and how it can be used for object detection.",
         link: "https://github.com/Coluding/RetinaNet",
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
@@ -62,7 +62,7 @@ export const projects: ProjectTemplateProps[] = [
         title: "Vision Transformer Implementation from scratch",
         summary: "This project implements a Vision Transformer model for image classification. The model is trained on a dataset of images and learns to classify them into different categories. The notebook includes code for data preprocessing, model training, and model evaluation. The project is a theoretical exploration of Vision Transformer models and aims to provide insights into their performance in image classification. "+
         "I explained how the Vision Transformer is dependent on a lot of data and how it is not as efficient as Convolutional Neural Networks for smaller datasets. However, I also showed that the Vision Transformer can be used for image classification and that it is a powerful model for large datasets.",
-        link: "https://www.kaggle.com/code/strangetravel/vision-transformer-implementation-from-scratch",   
+        link: "https://www.kaggle.com/code/strangetravel/vit-from-scratch-sports-classification/notebook",
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 7,

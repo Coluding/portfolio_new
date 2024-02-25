@@ -101,6 +101,43 @@ The exploration-exploitation trade-off is a fundamental aspect of reinforcement 
         id: 5,
         date: "2024-02-20",
 
+    },
+    {
+        img: "126.jpg",
+        title: "Reinforcement Learning Basics: Thompson Sampling",
+        summary: "Thomas Sampling is a popular algorithm for solving the exploration-exploitation trade-off in reinforcement learning. It is a Bayesian approach that leverages probability distributions to model the uncertainty in the reward estimates of different actions. The algorithm selects actions based on their probability of being the best action, taking into account both the average reward and the uncertainty in the reward estimates. This approach ensures that the agent explores actions with uncertain rewards while exploiting actions with high expected rewards. Thompson Sampling has been shown to be effective in a wide range of applications, including online advertising, recommendation systems, and healthcare.",
+        categories: [BlogCategory.ReinforcementLearning, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
+        id: 6,
+        date: "2024-02-20",
+        content:[String.raw`\section{Introduction}to be added....`]
+    }  ,
+    {
+        img: "3665587.jpg",
+        title: "Jordan Canonical Form",
+        summary: "The Jordan canonical form is a matrix decomposition that provides a canonical form for a matrix that is similar to a given matrix. It is a powerful tool in linear algebra and has applications in a wide range of fields, including differential equations, control theory, and quantum mechanics. The Jordan canonical form decomposes a matrix into a block-diagonal form, with each block corresponding to a Jordan block. The Jordan blocks capture the essential properties of the matrix, making it easier to analyze and understand. The Jordan canonical form is a fundamental concept in linear algebra and plays a crucial role in understanding the structure and behavior of linear transformations and matrices." +
+        "I was confronted with this topic in my linear algebra course and I found it very interesting and useful. I would like to share my knowledge and understanding of the Jordan canonical form with you. This post will civer both intuition and mathematical details of the Jordan canonical form from my perspective.",
+        categories: [BlogCategory.Mathematics],
+        id: 7,
+        date: "2024-02-20",
+        content:[String.raw`\section{Introduction}to be added....`]
+    },
+    {
+        img:"3665587.jpg",
+        title: "The spectral theorem: Intuiton and Theoretical Background",
+        summary: "The spectral theorem is a fundamental result in linear algebra that provides a powerful and elegant way to decompose a matrix into its eigenvalues and eigenvectors. It is a key concept in the study of linear transformations and has applications in a wide range of fields, including quantum mechanics, signal processing, and machine learning. The spectral theorem provides a deep understanding of the structure and behavior of matrices and is an essential tool for analyzing and solving problems in linear algebra. In this post, I will explain the spectral theorem, its intuition, and its theoretical background, drawing on my experience and knowledge of linear algebra and mathematics.",
+        categories: [BlogCategory.Mathematics],
+        id: 8,
+        date: "2024-02-20",
+        content:[String.raw`\section{Introduction}to be added....`]
+    },
+    {
+        title: "Self-Supervised Learning: A Comprehensive Overview",
+        img: "2960599.jpg",
+        summary: "Self-Supervised Learning (SSL) is a very interesting and promising field in machine learning. It is a type of learning where the model learns to represent the input data in a way that makes it easier to predict the data itself. This is done by creating a supervised learning problem from the input data itself. The model is trained to predict some part of the input data from another part of the input data. This approach has been shown to be very effective in learning useful representations of the input data, which can then be used for a wide range of downstream tasks." + 
+        "It is foundated in Vision and Language tasks, which I will cover here.  The main benefit of SSL is to remove the need for human labeled data. Further the model is often able to learn and understand a broad and generalized understanding if the data it was trained on, often broader than in supervised learning. In this post, I will provide a comprehensive overview of self-supervised learning, covering its key concepts, techniques, and applications.",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.NLP, BlogCategory.ComputerVision],
+        id: 9,
+        date: "2024-02-20",
+        content:[String.raw`\section{Introduction}to be added....`]
     }
-
 ]

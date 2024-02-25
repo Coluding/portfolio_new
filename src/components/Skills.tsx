@@ -62,7 +62,7 @@ const Skills = () => {
                 gap: 2,
                 textAlign: "center",
             }}>
-                <Typography fontWeight={"bold"} variant={"body1"}>Web Development Tect Stack</Typography>
+                <Typography fontWeight={"bold"} variant={"body1"}>Web Development Tech Stack</Typography>
             </Box>
             <Box sx={{
                 gridColumn: "span 4",
