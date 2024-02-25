@@ -88,7 +88,7 @@ const HomePage = () => {
                         position: "absolute", top: 0, left: 0, opacity: 0.9,
                         overflow: "hidden", zIndex: -2
                     }}
-                    autoPlay loop muted>
+                    loop={true} muted={true} autoPlay={true} playsInline={true}>
                     <source src={background} type='video/mp4' />
                 </video>
 
