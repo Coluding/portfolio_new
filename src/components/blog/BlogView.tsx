@@ -1,8 +1,8 @@
-import { Box, useTheme, Divider, Typography, Grow, Paper,Button, useMediaQuery } from "@mui/material";
+import { Box, useTheme, Divider, Typography, Grow, Paper, useMediaQuery } from "@mui/material";
 import α from 'color-alpha';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -33,7 +33,7 @@ const BlogView = () => {
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     const [categories, setCategories] = useState<string[]>([]);
     const [filteredBlogs, setFilteredBlogs] = useState(blogs);
-    const navigate = useNavigate();
+
 
     useEffect(() => {
         if (categories.length === 0) {

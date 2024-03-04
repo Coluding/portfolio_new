@@ -1,4 +1,4 @@
-import {Box, Typography, useTheme, Divider, useMediaQuery, CardActionArea, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions} from "@mui/material";
+import {Box, Typography, useTheme, Divider, useMediaQuery, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions} from "@mui/material";
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
