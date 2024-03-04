@@ -1,7 +1,8 @@
-import { Box, useTheme, Divider, Typography, Grow, Paper, useMediaQuery } from "@mui/material";
+import { Box, useTheme, Divider, Typography, Grow, Paper,Button, useMediaQuery } from "@mui/material";
 import α from 'color-alpha';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -32,6 +33,7 @@ const BlogView = () => {
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     const [categories, setCategories] = useState<string[]>([]);
     const [filteredBlogs, setFilteredBlogs] = useState(blogs);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (categories.length === 0) {
@@ -80,11 +82,12 @@ const BlogView = () => {
                 justifyContent: "space-between",
                
                 }}>
+                  
                 <Typography variant={isMobile ?  "h3" : 
                                     isTablet ? "h2": "h1"} fontWeight={"bold"}>My Personal Blog</Typography>
                 <Typography variant={isMobile ? "body1": 
                                     isTablet? "body1": "h3"}>
-                    I am trying to document and share my journey in AI and Machine Learning
+                    Accompany me on my journey through AI, Machine Learning and Software Development
                 </Typography>
                 </Box>
             <Divider sx={{ width: '100%'}}></Divider>

@@ -50,9 +50,11 @@ const ProjectsHome = () => {
                     color: "white",
                     backgroundColor:"black",
                     borderRadius: "10px",
-                    
+                    ":hover": {
+                        backgroundColor: "gray",
+                    }
                 }}>
-                    Check them out...
+                    Check them out
                 </Button>
                 </Box>
         </Box>

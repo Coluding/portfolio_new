@@ -1,4 +1,4 @@
-import {Box, Typography, useTheme, Divider, useMediaQuery, CardActionArea} from "@mui/material";
+import {Box, Typography, useTheme, Divider, useMediaQuery, CardActionArea, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions} from "@mui/material";
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -51,9 +51,12 @@ const TechStackBox: React.FC<{tech: TechStack, variant: "body2" | "caption"}> = 
 export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const [open, SetOpen] = React.useState(false);
+
     return (
+      <>
       <Card sx={{minWidth:"100%", minHeight:"100%"}}>
-        <CardActionArea onClick={() => window.open(props.link, "_blank")}>
+        
         <CardMedia
           sx={{ height: 140 }}
           image={new URL( "/assets/" + props.img, import.meta.url).href }
@@ -91,8 +94,9 @@ export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
         }}>
           <Box display={"flex"} justifyContent={"space-between"} width={"100%"}>
             <Box>
-          <Button size="small"onClick={() => window.open(props.link, "_blank")}>
-            <Typography variant={"body1"}>Read  More</Typography>
+          <Button size="small"onClick={() => SetOpen(true)
+           }>
+            <Typography variant={"body1"}>{`See ${props.link.includes("github") ? "more on Github" : props.link.includes("kaggle") ? "See more on Kaggle" : ""}`}</Typography>
             {!isMobile && <ArrowForwardIcon fontSize="small"/>}
           </Button>
           </Box>
@@ -108,7 +112,32 @@ export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
           </Box>
           </Box>
         </CardActions>
-        </CardActionArea>
+      
       </Card>
+      <Dialog
+      open={open}
+      onClose={() => SetOpen(false)}
+      aria-labelledby="success-dialog-title"
+      aria-describedby="success-dialog-description"
+      >
+      <DialogTitle id="success-dialog-title">{"Follow?"}</DialogTitle>
+      <DialogContent>
+          <DialogContentText id="success-dialog-description">
+          {`You will follow an external link to 
+          ${props.link.includes("github") ? "Github" : props.link.includes("kaggle") ? "Kaggle" : "" }`}
+          
+  
+                 </DialogContentText>
+      </DialogContent>
+      <DialogActions>
+          <Button onClick={() => SetOpen(false)} color="primary" autoFocus>
+          Close
+          </Button>
+          <Button onClick={() => window.open(props.link, "_blank")} color="primary">
+          Continue
+          </Button>
+      </DialogActions>
+      </Dialog>
+      </>
     );
 }

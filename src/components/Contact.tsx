@@ -238,7 +238,7 @@ const Contact = () => {
             <DialogTitle id="success-dialog-title">{"Success"}</DialogTitle>
             <DialogContent>
                 <DialogContentText id="success-dialog-description">
-                Your message has been successfully sent. I will contact you soon!
+                Thanks for reaching out. I will contact you soon!
                 </DialogContentText>
             </DialogContent>
             <DialogActions>

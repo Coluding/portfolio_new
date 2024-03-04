@@ -105,7 +105,7 @@ const ProjectView = () => {
                                     isTablet ? "h2": "h1"} fontWeight={"bold"}>My Projects</Typography>
                 <Typography variant={isMobile ? "body1": 
                                     isTablet? "body1": "h3"}>
-                    I am trying to document and share my journey in AI and Machine Learning
+                    Accompany me on my journey through AI, Machine Learning and Software Development
                 </Typography>
                 </Box>
             <Divider sx={{ width: '100%'}}></Divider>

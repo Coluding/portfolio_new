@@ -1,6 +1,5 @@
-import {Box, useTheme, Divider, Button, useMediaQuery} from "@mui/material";
+import {Box, useTheme, Divider, Button, useMediaQuery, Typography} from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { TypeAnimation } from "react-type-animation";
 
 
 const BlogHome = () => {
@@ -22,21 +21,22 @@ const BlogHome = () => {
              <Divider sx={{ width: '100%', fontWeight:"bold"}}>Blog</Divider>
         
             <Box fontSize={isMobile ? theme.typography.body1.fontSize : theme.typography.h3.fontSize}>
-                <TypeAnimation
-                    cursor={true}
-                    sequence={["Welcome to my Blog", 1000, "I write about AI, Machine Learning and Software Development", 1000]}
-                    repeat={Infinity}
-                />
+            <Typography>
+                   I write about AI, Machine Learning and Software Development
+                   </Typography>
                 </Box>
-                <Button 
+                <Button size="small"
                     onClick={() => navigate("/blog")}
                     sx={{
                     color: "white",
                     backgroundColor:"black",
                     borderRadius: "10px",
-                   
+                    ":hover": {
+                        backgroundColor: "gray",
+                    }   
+                    
                 }}>
-                    See more ...
+                    Check them out
                 </Button>
         </Box>
     )
