@@ -16,7 +16,7 @@ const steps = [
   '2021 PwC Financial Mathematics',
   '2022 Bachelor of Science Information Systems',
   '2022 KPMG Data Scientist',
-  '2023 Bachelor of Science Computer Science',
+  '2023 Bachelor of Science Computer Science with focus on Mathematics and AI',
   "2024 Research Assistant NLP University of Passau",
 ];
 const AboutMe = () => {

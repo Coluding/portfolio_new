@@ -26,12 +26,15 @@ const HomePage = () => {
     const offset = -window.innerHeight * 0.1;
 
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isLarge = useMediaQuery(theme.breakpoints.up('lg'));
+    const opacityFactor = isLarge ? 1.5 : 1;
 
     useEffect(() => {
         console.log(displayWidth)
         const handleScroll = () => {
             const currentScroll = window.scrollY * widthRatio;
-            const newOpacity = 1 - currentScroll / displayHeight;
+            const newOpacity = 1 - ((currentScroll * opacityFactor) / displayHeight) ;
+            console.log("opacity", newOpacity)
             setOpacity(newOpacity);
         };
        
@@ -42,7 +45,7 @@ const HomePage = () => {
 
     useEffect(() => {
         console.log(opacity)
-        const threshold = isMobile ? -0.5: -0.03;
+        const threshold = isMobile ? -0.5: 0.1;
         if (opacity < threshold){
             setDisplayAbout(true)
             
@@ -119,7 +122,7 @@ const HomePage = () => {
                                         'Hi, I am Lukas!\nMachine Learning Engineer and Full Stack Developer.\n Welcome to my portfolio!'
                                     ]}
                                     wrapper="span"
-                                    speed={50}
+                                    speed={65}
                                     style={{ fontSize: '2em', display: 'inline-block' }}
                                 />
                             </Box>
