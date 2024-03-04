@@ -112,7 +112,7 @@ const HomePage = () => {
                                 borderRadius: '15px', 
                             }}>
                             <Box borderBottom={"0px solid grey"} display={"flex"} alignItems={"center"}
-                                marginBottom={"30px"}>
+                                marginBottom={"1%"}>
                                 <TypeAnimation
                                     sequence={[
                                         'Hi, I am Lukas!',
