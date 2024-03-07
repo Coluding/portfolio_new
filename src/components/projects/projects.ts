@@ -159,7 +159,15 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.PracticalMachineLearning, BlogCategory.Infrastructure, BlogCategory.NLP],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 16
-    }
+    },
+    {   img: "gradient_brain.jpg",
+        title: "Reinforcement Learning Code Examples",
+        link: "https://github.com/Coluding/reinforcement-learning",
+        summary: "This repository contains code exmaples I used during my journey to understand Reinforcement Learning (RL). I implemented different algorithms from scratch or used examples I got from the courses I took" 
+        + ". It is part of the documentation of my learning process of RL, where I start with the fundamentals like Bellman Equation, Monte Carlo Methods or Temporal Difference Learning and then start to dive into more advanced topics like function approximations with deep neural nets.",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
+        techStack: [TechStack.Python, TechStack.PyTorch],
+        id: 17}
     
 
 ]
