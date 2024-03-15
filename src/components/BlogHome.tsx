@@ -29,6 +29,7 @@ const BlogHome = () => {
                     onClick={() => navigate("/blog")}
                     sx={{
                     color: "white",
+                    padding: "0.3%",
                     backgroundColor:"black",
                     borderRadius: "10px",
                     ":hover": {

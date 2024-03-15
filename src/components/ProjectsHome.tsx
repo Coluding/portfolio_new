@@ -49,6 +49,7 @@ const ProjectsHome = () => {
                     sx={{
                     color: "white",
                     backgroundColor:"black",
+                    padding: "0.3%",
                     borderRadius: "10px",
                     ":hover": {
                         backgroundColor: "gray",
