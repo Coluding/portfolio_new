@@ -169,7 +169,28 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision],
         techStack: [TechStack.Java],
         id: 17
+    },
+    {
+        img: "retro-computer-desk-arrangement.jpg",
+        link: "https://github.com/Coluding/atari-deep-q-learning",
+        title: "Deep Q Learning for Atari Games",
+        summary: "This repository contains the code for training a Deep Q-Learning model an Atari Games. It is more of a theoretical project, where I wanted to understand the concept of Deep Q-Learning and how it can be used for playing Atari Games." +
+        " I am using different model architectures, mainly Convolutional Neural Networks, to train the model. The training is done on a single GPU while using a prioritized experience replay buffer." +
+        " It is currently still in development and I am adding several changes in the upcoming weeks.",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
+        techStack: [TechStack.Python, TechStack.PyTorch],
+        id: 18
+    },
+    {
+        img: "gradient_brain.jpg",
+        link: "https://github.com/Coluding/reinforcement-learning",
+        title: "Reinforcement Learning: Collection of Learnings",
+        summary: "This repository contains a collection of different Reinforcement Learning algorithms that I implemented for my own learning purposes." +
+        " It contains algorithms such as Q-Learning, Deep Q-Learning, Policy Gradients, Actor Critic, Proximal Policy Optimization and more." +
+        " It is currently still in development and I am adding several changes in the upcoming weeks since I am still learning a lot about Reinforcement Learning.",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
+        techStack: [TechStack.Python, TechStack.PyTorch],
+        id: 19
     }
-    
 
 ]
