@@ -161,7 +161,7 @@ export const projects: ProjectTemplateProps[] = [
         id: 16
     },
     {
-        img: "eine-illustration-von-einem-roboter-der-eine-idee-hat.jpg",
+        img: "SL-042422-49910-15.jpg",
         link: "https://github.com/Coluding/image_transforms",
         title: "Basic Image Transformation Library",
         summary: "This repository contains a basic image transformation library that I developed for my own use. It is based on a Computer Vision lecture that was offered on Youtube." +
@@ -191,6 +191,17 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 19
+    },
+    {
+        img: "182133363342544.jpg",
+        link: "https://github.com/Coluding/StableDiffusionPractice",
+        title: "Stable Diffusion: Collection of practice and Learnings",
+        summary: "This repository contains the basic Stable Diffusion implementation that I developed to learn and understand the concept of Stable Diffusion." +
+        "I implemnted the downsampling and upsampling of the images and the diffusion process from scratch. I also implemented the training process of the model." +
+        "In the future I am planning to add more features to the model and to improve the performance of the model. Further I want to inlcude different types and concepts of Diffusion models.",
+          categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ComputerVision],
+        techStack: [TechStack.Python, TechStack.PyTorch],
+        id: 20
     }
 
 ]
