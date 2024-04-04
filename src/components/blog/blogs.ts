@@ -83,6 +83,15 @@ where $W$ contains the window sizes $w_l$ for each layer $l$.`],
     }, 
     {
         img: "126.jpg",
+        title: "Reinforcement Learning: Policy Gradient Methods - Intuitive and Analytical Overview",
+        summary: "Policy gradient methods are a class of reinforcement learning algorithms that directly optimize the policy of an agent to maximize its expected cumulative reward. Unlike value-based methods that estimate the value of different actions or states, policy gradient methods learn a parameterized policy that maps states to actions. This policy is then optimized using gradient ascent on the expected cumulative reward, which is also known as the objective function. Policy gradient methods have been shown to be effective in a wide range of applications, including robotics, game playing, and natural language processing.",
+        categories: [BlogCategory.ReinforcementLearning, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
+        id: 10,
+        content: ["PolicyGradient_ActorCritic.pdf"],
+        date: "2024-04-04",
+    },
+    {
+        img: "126.jpg",
         title: "Basics of Reinforcement Learning: Epsilon Greedy Algorithm, Optimistic Initial Values and Upper Confidence Bound",
         summary: "Reinforcement learning is a type of machine learning that involves training an agent to make decisions within an environment in order to maximize some notion of cumulative reward. The agent learns to achieve a goal in an uncertain, potentially complex environment." +
         " The agent is not told which actions to take, but instead must discover which actions yield the most reward by trying them out. In the most interesting and challenging cases, actions may affect not only the immediate reward but also the next situation and, through that, all subsequent rewards. These two characteristics -- trial-and-error search and delayed reward -- are the two most important distinguishing features of reinforcement learning. This trial and error paradigm is also known as the exploration-exploitation trade-off. The agent must exploit what it has already experienced in order to obtain reward, but it must also explore in order to make better action selections in the future. The agent must use a balance of exploration and exploitation to maximize its reward over time." +
@@ -102,6 +111,7 @@ The exploration-exploitation trade-off is a fundamental aspect of reinforcement 
         date: "2024-02-20",
 
     },
+
     {
         img: "126.jpg",
         title: "Reinforcement Learning Basics: Thompson Sampling",
@@ -140,31 +150,4 @@ The exploration-exploitation trade-off is a fundamental aspect of reinforcement 
         date: "2024-02-20",
         content:[String.raw`\section{Introduction}to be added....`]
     },
-    {
-        title: "Bellman Equation and Dynamic Programming in Reinforcement Learning",
-        img: "126.jpg",
-        summary: "The Bellman equation is a fundamental concept in reinforcement learning that provides a recursive definition of the value function of a Markov decision process. It is a key tool for solving reinforcement learning problems and has applications in a wide range of fields, including robotics, game playing, and finance. The Bellman equation is used to decompose the value function into its immediate reward and the value of the next state, providing a way to calculate the value of a state or action over time. Dynamic programming is a powerful algorithmic technique that leverages the Bellman equation to solve complex optimization problems by breaking them down into simpler subproblems. In this post, I will explain the Bellman equation, its intuition, and its applications in reinforcement learning, drawing on my experience and knowledge of machine learning and mathematics.",
-        categories: [BlogCategory.ReinforcementLearning, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
-        id: 10,
-        date: "2024-02-20",
-        content:[String.raw`\section{Introduction}to be added....`]
-    },
-    {
-        title: "Monte Carlo Methods in Reinforcement Learning",
-        img: "126.jpg",
-        summary: "Monte Carlo methods are a class of algorithms that use random sampling to solve problems. In the context of reinforcement learning, Monte Carlo methods are used to estimate the value of states or actions by averaging the returns from multiple episodes. These methods are simple, powerful, and versatile, making them a popular choice for solving reinforcement learning problems. Monte Carlo methods have applications in a wide range of fields, including game playing, robotics, and finance. In this post, I will explain Monte Carlo methods, their intuition, and their applications in reinforcement learning, drawing on my experience and knowledge of machine learning and mathematics.",
-        categories: [BlogCategory.ReinforcementLearning, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
-        id: 11,
-        date: "2024-02-20",
-        content:[String.raw`\section{Introduction}to be added....`]
-    },
-    {
-    title: "Temporal Difference Learning in Reinforcement Learning",
-    img: "126.jpg",
-    summary: "Temporal difference (TD) learning is a class of algorithms that use bootstrapping to estimate the value of states or actions. In the context of reinforcement learning, TD learning algorithms update their value estimates based on the difference between the current estimate and a new estimate that is based on the reward and the value of the next state. These algorithms are simple, efficient, and versatile, making them a popular choice for solving reinforcement learning problems. TD learning has applications in a wide range of fields, including game playing, robotics, and finance. In this post, I will explain TD learning, its intuition, and its applications in reinforcement learning, drawing on my experience and knowledge of machine learning and mathematics.",
-    categories: [BlogCategory.ReinforcementLearning, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
-    id: 12,
-    date: "2024-02-20",
-    content:[String.raw`\section{Introduction}to be added....`]
-}
 ]
