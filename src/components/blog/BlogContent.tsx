@@ -1,4 +1,5 @@
-import { Box, Divider, Typography, useTheme, Fade, useMediaQuery, styled } from "@mui/material";
+import React from 'react';
+import { Box, Divider, Typography, useTheme, Fade, useMediaQuery, styled, Button } from "@mui/material";
 import { useParams } from 'react-router-dom';
 import 'katex/dist/katex.min.css';
 import { convertToCustomFormat } from '../../utils/latex';
@@ -47,11 +48,29 @@ const MathBlog = () => {
                 <Typography variant="body1">{timestamp}</Typography>
               </Box>
               {blog.content.map((content, index) => (
-                <Box key={index} sx={{ padding: theme.spacing(2) }} marginTop={"2%"}>
+                <Box key={index} sx={{ padding: theme.spacing(2), display:"flex", justifyContent:"center" }} marginTop={"2%"}>
                   {content.endsWith('.pdf') ? (
-                    <IframeContainer>
-                      <Iframe src={new URL( "/assets/" + content, import.meta.url).href}  allowFullScreen />
-                    </IframeContainer>
+                    isMobile ? (
+                      <Box sx={{ padding: theme.spacing(2), display:"flex", flexDirection:"column", justifyContent:"center" }}>
+                      <Typography variant="body1">
+                        This blog article was written in LaTeX and converted to PDF.
+                        PDF content is not supported on mobile devices. Please view on a desktop or download the PDF below.
+                      </Typography>
+                      <Button
+                        sx={{ marginTop: theme.spacing(2) }}
+                        variant="contained"
+                        component="a"
+                        href={new URL("/assets/" + content, import.meta.url).href}
+                        download
+                      >
+                        Download PDF
+                      </Button>
+                      </Box>
+                    ) : (
+                      <IframeContainer>
+                        <Iframe src={new URL("/assets/" + content, import.meta.url).href} allowFullScreen />
+                      </IframeContainer>
+                    )
                   ) : (
                     <LatexRenderer text={convertToCustomFormat(content)} />
                   )}
