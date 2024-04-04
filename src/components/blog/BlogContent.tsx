@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Divider, Typography, useTheme, Fade, useMediaQuery, styled, Button } from "@mui/material";
 import { useParams } from 'react-router-dom';
 import 'katex/dist/katex.min.css';
