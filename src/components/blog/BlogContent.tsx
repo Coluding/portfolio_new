@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Divider, Typography, useTheme, Fade, useMediaQuery, styled } from "@mui/material";
 import { useParams } from 'react-router-dom';
 import 'katex/dist/katex.min.css';
@@ -13,9 +12,9 @@ const MathBlog = () => {
   const blog = blogs.find(blog => blog.id === parseInt(id || ""));
   const timestamp = new Date(blog?.date || "").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 
-  const IframeContainer = styled('div')(({ theme }) => ({
+  const IframeContainer = styled('div')(() => ({
     overflow: 'hidden',
-    paddingBottom: '56.25%', // Aspect ratio for 16:9, adjust as needed
+    paddingBottom: '56.25%', 
     position: 'relative',
     height: 0,
     width: '100%',
