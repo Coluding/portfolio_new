@@ -84,10 +84,11 @@ where $W$ contains the window sizes $w_l$ for each layer $l$.`],
     {
         img: "126.jpg",
         title: "Reinforcement Learning: Policy Gradient Methods - Intuitive and Analytical Overview",
-        summary: "Policy gradient methods are a class of reinforcement learning algorithms that directly optimize the policy of an agent to maximize its expected cumulative reward. Unlike value-based methods that estimate the value of different actions or states, policy gradient methods learn a parameterized policy that maps states to actions. This policy is then optimized using gradient ascent on the expected cumulative reward, which is also known as the objective function. Policy gradient methods have been shown to be effective in a wide range of applications, including robotics, game playing, and natural language processing.",
+        summary: "Policy gradient methods are a class of reinforcement learning algorithms that directly optimize the policy of an agent to maximize its expected cumulative reward. Unlike value-based methods that estimate the value of different actions or states, policy gradient methods learn a parameterized policy that maps states to actions. This policy is then optimized using gradient ascent on the expected cumulative reward, which is also known as the objective function. Policy gradient methods have been shown to be effective in a wide range of applications, including robotics, game playing, and natural language processing." +
+        "This blog article introduces the concept of policy gradient methods in reinforcement learning, providing both an intuitive and analytical overview of how these algorithms work. We will cover the basic principles of policy gradients, the advantages and disadvantages of this approach, and some common policy gradient algorithms, such as REINFORCE and Actor-Critic.",
         categories: [BlogCategory.ReinforcementLearning, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
         id: 10,
-        content: ["PolicyGradient_ActorCritic.pdf"],
+        content: ["PolicyGradient_ActorCritic (2).pdf"],
         date: "2024-04-04",
     },
     {
