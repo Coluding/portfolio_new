@@ -88,7 +88,7 @@ where $W$ contains the window sizes $w_l$ for each layer $l$.`],
         "This blog article introduces the concept of policy gradient methods in reinforcement learning, providing both an intuitive and analytical overview of how these algorithms work. We will cover the basic principles of policy gradients, the advantages and disadvantages of this approach, and some common policy gradient algorithms, such as REINFORCE and Actor-Critic.",
         categories: [BlogCategory.ReinforcementLearning, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
         id: 10,
-        content: ["PolicyGradient_ActorCritic (2).pdf"],
+        content: ["p_ac_grad.pdf"],
         date: "2024-04-04",
     },
     {
