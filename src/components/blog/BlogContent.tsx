@@ -1,4 +1,4 @@
-import { Box, Divider, Typography, useTheme, Fade, styled, Button } from "@mui/material";
+import { Box, Divider, Typography, useMediaQuery, useTheme, Fade, styled, Button } from "@mui/material";
 import { useParams } from 'react-router-dom';
 import 'katex/dist/katex.min.css';
 import { convertToCustomFormat } from '../../utils/latex';
@@ -10,8 +10,8 @@ import { blogs } from './blogs';
 const MathBlog = () => {
   const theme = useTheme();
   const { id } = useParams();
-  //const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const isMobile = true;
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  //const isMobile = true;
   const blog = blogs.find(blog => blog.id === parseInt(id || ""));
   const timestamp = new Date(blog?.date || "").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 
