@@ -202,6 +202,17 @@ export const projects: ProjectTemplateProps[] = [
           categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ComputerVision],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 20
+    },
+    {
+        img: "ai-cloud-concept-with-robot-arm.jpg",
+        link: "https://github.com/Coluding/RL-Trial",
+        title: "Deep Reinforcement Learning experiments on OpenAI Gymenvironments",
+        summary: "This repository contains the code for training different Reinforcement Learning models on OpenAI Gym environments." +
+        " I am using different model architectures, mainly Convolutional Neural Networks, to train the model. The training is done on a single GPU while using a prioritized experience replay buffer." +
+        " It is currently still in development and I am adding several changes in the upcoming weeks. Main algorithms are Q-Learning, Deep Q-Learning and PPO, implemented from scratch.",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ComputerVision],
+        techStack: [TechStack.Python, TechStack.PyTorch],
+        id: 20
     }
 
 ]
