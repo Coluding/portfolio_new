@@ -213,6 +213,17 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ComputerVision],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 20
+    },
+    {
+        img: "lats2.jpg",
+        link: "https://github.com/Coluding/thesis-rl",
+        title: "Optimizing Allocation Location Problems: A Hybrid Approach with Graph Neural Networks and Deep Reinforcement Learning",
+        summary: "This repository contains the code for my Bachelor Thesis on optimizing location allocation using graph neural networks and reinforcement learning. " +
+        "I developed a model to solve the problem and built a simulation environment for a replicated state machine system, representing a global data center network. " +
+        "The goal was to optimize location allocation and compare the model's performance with traditional heuristics.",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.GraphNeuralNetworks, BlogCategory.ReinforcementLearning, BlogCategory.Mathematics, BlogCategory.PracticalMachineLearning],
+        techStack: [TechStack.Python, TechStack.PyTorch, TechStack.Java],
+        id: 21
     }
 
 ]

@@ -16,8 +16,9 @@ const steps = [
   '2021 PwC Financial Mathematics',
   '2022 Bachelor of Science Information Systems',
   '2022 KPMG Data Scientist',
-  '2023 Bachelor of Science Computer Science with focus on Mathematics and AI',
+  '2023 Bachelor of Science Mathematical Computer Science',
   "2024 Research Assistant NLP University of Passau",
+  "2024 Master of Science Artificial Intelligence"
 ];
 const AboutMe = () => {
     const theme = useTheme();
@@ -109,7 +110,7 @@ const AboutMe = () => {
                     </Typography>
                     {true &&
                     <Box marginTop={"5%"}>
-                    <Stepper activeStep={2} alternativeLabel>
+                    <Stepper activeStep={3} alternativeLabel>
                     {steps.map((label) => (
                       <Step key={label}>
                         <StepLabel>{label}</StepLabel>

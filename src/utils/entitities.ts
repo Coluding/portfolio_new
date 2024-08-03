@@ -5,6 +5,7 @@ export enum BlogCategory {
     NLP = "NLP",
     Infrastructure = "Infrastructure",
     ReinforcementLearning = "Reinforcement Learning",
+    GraphNeuralNetworks = "Graph Neural Networks",
     Mathematics = "Mathematics",
     Frontend = "Frontend",
     Backend = "Backend",
