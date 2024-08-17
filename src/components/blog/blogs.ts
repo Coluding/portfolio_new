@@ -82,6 +82,16 @@ where $W$ contains the window sizes $w_l$ for each layer $l$.`],
         date: "2024-02-18",
     }, 
     {
+        img: "26062.jpg",
+        title: "Mamba: A Transformer alternative based on Selective State Space Models",
+        summary: "Mamba is a novel architecture that combines the strengths of Transformers and Selective State Space Models to address the limitations of both models. Transformers have been highly successful in a wide range of applications, particularly in natural language processing, but they suffer from high computational and memory requirements, making them challenging to deploy in resource-constrained environments. State Space Models, on the other hand, are more efficient but lack the expressive power of Transformers. Mamba based on selective state space models aims to bridge this gap by leveraging the strengths of both models to create a more efficient and effective architecture for machine learning tasks." + 
+        "It does this by offering a parallel traning perspective and a constant time inference possibility using a recurrent perspective making the model highly flexible",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.NLP],
+        content:["Mamba.pdf"],
+        id: 12,
+        date: "2024-08-11",
+    },
+    {
         img: "126.jpg",
         title: "Reinforcement Learning: Policy Gradient Methods - Intuitive and Analytical Overview",
         summary: "Policy gradient methods are a class of reinforcement learning algorithms that directly optimize the policy of an agent to maximize its expected cumulative reward. Unlike value-based methods that estimate the value of different actions or states, policy gradient methods learn a parameterized policy that maps states to actions. This policy is then optimized using gradient ascent on the expected cumulative reward, which is also known as the objective function. Policy gradient methods have been shown to be effective in a wide range of applications, including robotics, game playing, and natural language processing." +

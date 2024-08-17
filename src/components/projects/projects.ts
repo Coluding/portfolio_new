@@ -150,13 +150,12 @@ export const projects: ProjectTemplateProps[] = [
         img: "2884.jpg",
         link: "https://github.com/Coluding/Assessing-Efficiency-in-Domain-Specific-Transformer-Models", 
         title: "Assessing Efficiency in Domain Specific Transformer Models",
-        summary: "This repository contains the code for my Bachelor Thesis. It is a broad repository where I implement different types of attention mechanisms from scratch and make use of different existing attention based models." +
-        " I also implemented a new Transformer model, a reversible dilated BERT model. However its performance was not as good as I expected. Apart from that I implemented the Electra pretraining approach with different discriminator and generator models (m custom models and others like the Reformer) and compared the performance of the models."+
-        "Further I chose the best model for my specific use case, which was optimizing domain specific  pretraining with limited ressources and finetuned the discriminator model on financial text data." +
-        " I achieved fairly decent results and was able to show that the Electra pretraining approach is a good alternative to the BERT pretraining approach, especially when it comes to domain specific pretraining with limited ressources." +
-        " In the end I was able to learn a lot about the different attention mechanisms and how they can be used to optimize the performance of a model. I also learned a lot about the Electra pretraining approach and how it can be used to optimize domain specific pretraining." + 
-        " I used Pytorch and the Transformers library for the implementation of the models and the training of the models. I also used the Huggingface Datasets library to preprocess the data and to load the data into the model. The training was done on a single Titan V GPU.", 
-        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.PracticalMachineLearning, BlogCategory.Infrastructure, BlogCategory.NLP],
+        summary: "This repository contains the code for my Bachelor Thesis, where I implemented various attention mechanisms and developed a reversible dilated BERT model. " +
+        "I also experimented with the Electra pretraining approach using different models, comparing their performance. " +
+        "I fine-tuned the best model on financial text data, demonstrating Electra's effectiveness for domain-specific tasks with limited resources. " +
+        "This project gave me insights into attention mechanisms and pretraining approaches. I used PyTorch, Transformers, and Huggingface Datasets for implementation, with training done on a Titan V GPU.",
+    
+    categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.PracticalMachineLearning, BlogCategory.Infrastructure, BlogCategory.NLP],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 16
     },
@@ -221,7 +220,7 @@ export const projects: ProjectTemplateProps[] = [
         summary: "This repository contains the code for my Bachelor Thesis on optimizing location allocation using graph neural networks and reinforcement learning. " +
         "I developed a model to solve the problem and built a simulation environment for a replicated state machine system, representing a global data center network. " +
         "The goal was to optimize location allocation and compare the model's performance with traditional heuristics.",
-        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.GraphNeuralNetworks, BlogCategory.ReinforcementLearning, BlogCategory.Mathematics, BlogCategory.PracticalMachineLearning],
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.GraphNeuralNetworks, BlogCategory.ReinforcementLearning, BlogCategory.PracticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch, TechStack.Java],
         id: 21
     }
