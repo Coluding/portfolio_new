@@ -12,7 +12,7 @@ import ba from "../assets/BA_kein_deckblatt.pdf";
 import ba2 from "../assets/thesis_bierling_gnn_rl_.pdf";
 import cv_german from "../assets/lebenslauf_deutsch.pdf";
 
-const steps = [
+const stepsStart = [
   '2020  Bachelor of Science Economics',
   '2021 PwC Financial Mathematics',
   '2022 Bachelor of Science Information Systems',
@@ -26,6 +26,9 @@ const AboutMe = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     const [expanded, setExpanded] = useState<boolean>(true);
+    const steps = isMobile ? stepsStart.slice(1, 7) : stepsStart;
+
+
 
 
     return (
@@ -127,11 +130,11 @@ const AboutMe = () => {
    
             </Box>
             <Box sx={{ textAlign: 'center', 
-                gridColumn: "span 4",
-            marginTop: theme.spacing(2),
-             display:"flex", 
-             gap:"10px",
-             justifyContent:"center"}}>
+                gridColumn:  isMobile ? "span 4" : "span 4",
+                marginTop: theme.spacing(2),
+                display: "flex",
+                gap:"10px",
+                justifyContent:"center"}}>
             <Button
               variant="contained"
               href={cv}
@@ -146,7 +149,14 @@ const AboutMe = () => {
             >
               German CV
             </Button>
-            <Button
+          </Box>
+          <Box sx={{ textAlign: 'center', 
+                gridColumn:  isMobile ? "span 4" : "span 4",
+                marginTop: theme.spacing(2),
+                display: "flex",
+                gap:"10px",
+                justifyContent:"center"}}>
+           <Button
               variant="contained"
               href={ba}
               download="lukas-bierling-thesis.pdf"
