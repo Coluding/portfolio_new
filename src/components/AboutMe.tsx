@@ -26,7 +26,7 @@ const AboutMe = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     const [expanded, setExpanded] = useState<boolean>(true);
-    const steps = isMobile ? stepsStart.slice(1, 7) : stepsStart;
+    const steps = isMobile ? stepsStart.slice(2, 7) : stepsStart;
 
 
 
@@ -110,7 +110,7 @@ const AboutMe = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                 <Typography textAlign={"justify"}>
-                I'm a Computer Science, Information Systems, and Business Administration student focusing on Machine Learning, with a Bachelor's thesis on making Transformer models more efficient for financial text analysis. I work as a Machine Learning Engineer and Full Stack Developer, applying my skills in software development and AI to solve real-world problems, while also researching NLP in finance as a Research Assistant at the University of Passau. My interests span AI, particularly in Computer Vision and NLP, and I'm currently delving into Reinforcement Learning to further understand how AI can learn and make decisions within its environment.        
+                I'm a Artifical Intelligence master student  at the University of Amsterdam. I studied Computer Science, Information Systems, and Business Administration in the bachelor student focusing on Machine Learning, with one Bachelor's thesis on making Transformer models more efficient for financial text analysis. I work as a Machine Learning Engineer and Full Stack Developer, applying my skills in software development and AI to solve real-world problems, while also researching NLP in finance as a Research Assistant at the University of Passau. My interests span AI, particularly in Computer Vision and NLP, and I'm currently delving into Reinforcement Learning to further understand how AI can learn and make decisions within its environment.        
                     </Typography>
                     {true &&
                     <Box marginTop={"5%"}>
