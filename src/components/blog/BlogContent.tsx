@@ -4,6 +4,7 @@ import 'katex/dist/katex.min.css';
 import { convertToCustomFormat } from '../../utils/latex';
 import LatexRenderer from '../../utils/latex';
 import { blogs } from './blogs';
+import { Key } from "react";
 
 
 
@@ -50,7 +51,7 @@ const MathBlog = () => {
               }}>
                 <Typography variant="body1">{timestamp}</Typography>
               </Box>
-              {blog.content.map((content, index) => (
+              {Array.isArray(blog.content) && blog.content.map((content: string, index: Key | null | undefined) => (
                 <Box key={index} sx={{ padding: theme.spacing(2), display:"flex", justifyContent:"center" }} marginTop={"2%"}>
                   {content.endsWith('.pdf') ? (
                     
