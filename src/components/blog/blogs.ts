@@ -108,10 +108,6 @@ The exploration-exploitation trade-off is a fundamental aspect of reinforcement 
         date: "2024-02-20",
 
     },
-    {
-
-    },
-
 
     {
         img: "126.jpg",

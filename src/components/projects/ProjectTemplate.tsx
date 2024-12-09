@@ -95,7 +95,7 @@ export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
                 padding: "0.5%",
                 color: "white",
                 backgroundColor: "gray",
-
+                //@ts-ignore
               }} onClick={() => window.open(props.blogLink, "_blank")}
               >
              Blog Link
