@@ -12,6 +12,8 @@ export enum BlogCategory {
     DeepLearning = "Deep Learning",
     PracticalMachineLearning = "Practical Machine Learning",
     TheoreticalMachineLearning = "Theoretical Machine Learning",
+    Engineering = "Engineering",
+    LowLevel = "Low Level",
 }
 
 export enum TechStack {
@@ -28,4 +30,5 @@ export enum TechStack {
     Golang = "Golang",
     React = "React",
     Java = "Java",
+    CPP = "C++",
 }

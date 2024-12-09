@@ -17,6 +17,7 @@ export interface ProjectTemplateProps {
   categories: BlogCategory[]; 
   id: number
   link: string
+  blogLink: string | null
   
 } 
 
@@ -86,7 +87,23 @@ export const ProjectTemplate: React.FC<ProjectTemplateProps>= (props) => {
                 {props.techStack.map((tech) => (
                 <TechStackBox tech={tech} variant={isMobile ? "caption": "body2"}/>
                 ))}
+                
+              {props.blogLink && <Button sx={{
+                //set tor right edge
+                marginLeft: "auto",
+                borderRadius: "25px",
+                padding: "0.5%",
+                color: "white",
+                backgroundColor: "gray",
+
+              }} onClick={() => window.open(props.blogLink, "_blank")}
+              >
+             Blog Link
+            </Button>
+    }
             </Box>
+            <Box>
+          </Box>
           </Box>
         </CardContent>
         <CardActions sx={{

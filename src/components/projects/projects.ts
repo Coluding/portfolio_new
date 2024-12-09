@@ -10,6 +10,8 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision,  BlogCategory.PracticalMachineLearning, BlogCategory.Infrastructure],
         techStack: [TechStack.Python, TechStack.PyTorch, TechStack.Azure, TechStack.Docker],
         id: 1,
+        //link to blog page in react app
+        blogLink: null
     },
     {
         img: "2960599.jpg",
@@ -19,6 +21,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision,  BlogCategory.PracticalMachineLearning, BlogCategory.Infrastructure],
         techStack: [TechStack.Python, TechStack.PyTorch, TechStack.TensorFlow],
         id: 2,
+        blogLink: "/blog/2"
     },
     {
         img: "5060.jpg",
@@ -28,6 +31,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision,  BlogCategory.PracticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 3,
+        blogLink: null
     },
     {
         img: "3571486.jpg",
@@ -37,6 +41,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 4,
+        blogLink:  "/blog/13"
     },
     {
         img: "eine-studioportrait-collage-unterschiedlicher-menschen.jpg",
@@ -46,6 +51,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 5,
+        blogLink:  "/blog/11"
     },
     {
         img: "6157.jpg",
@@ -56,6 +62,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 6,
+        blogLink:  "/blog/12"
     },
     {
         img: "26062.jpg",
@@ -66,6 +73,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 7,
+        blogLink: "/blog/14"
     },
     {
         img: "eine-vogelperspektive-von-shanghai.jpg",
@@ -75,6 +83,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning, BlogCategory.PracticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 8,
+        blogLink: null
     },
     {
         img: "verkehrszeichen-auf-der-strasse.jpg",
@@ -84,6 +93,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning,],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 9,
+        blogLink: "/blog/15"
     },
     {
         img:"rueckansicht-des-arztes-der-radiographie-betrachtet.jpg",
@@ -93,6 +103,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision, BlogCategory.PracticalMachineLearning,],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 10,
+        blogLink: null
     },
     {
         img: "nationalmuseum-fuer-geschichte-rumaeniens.jpg",
@@ -103,6 +114,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.NLP, BlogCategory.PracticalMachineLearning, BlogCategory.TheoreticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 11,
+        blogLink: null
     },
     {
         img: "3665587.jpg",
@@ -112,6 +124,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.NLP, BlogCategory.TheoreticalMachineLearning, BlogCategory.Mathematics],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 12,
+        blogLink: null
     },
     {
         img: "fotorealistische-wolken.jpg",
@@ -123,6 +136,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning, BlogCategory.PracticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
         id: 13,
+        blogLink: null
     },
     {
         img: "1026.jpg",
@@ -132,6 +146,7 @@ export const projects: ProjectTemplateProps[] = [
         categories: [BlogCategory.ComputerVision, BlogCategory.Infrastructure],
         techStack: [TechStack.Python, TechStack.PyTorch, TechStack.Azure],
         id: 14,
+        blogLink: null
     },
     {
         img: "302401236-aa54af4b-4fc7-4a88-b792-c10222bd28d6.png",
@@ -144,7 +159,8 @@ export const projects: ProjectTemplateProps[] = [
         "To manage the database I used Alembic with its migration capabilites. Deployment was done using Docker and some shell scripts to execute Docker and Alembic commands correctly.",
         categories: [BlogCategory.Frontend, BlogCategory.Backend, BlogCategory.WebDevelopment, BlogCategory.Infrastructure],
         techStack: [TechStack.Python, TechStack.TypeScript, TechStack.JavaScript, TechStack.Docker, TechStack.React],
-        id: 15
+        id: 15,
+        blogLink: null
     },
     {
         img: "2884.jpg",
@@ -155,9 +171,10 @@ export const projects: ProjectTemplateProps[] = [
         "I fine-tuned the best model on financial text data, demonstrating Electra's effectiveness for domain-specific tasks with limited resources. " +
         "This project gave me insights into attention mechanisms and pretraining approaches. I used PyTorch, Transformers, and Huggingface Datasets for implementation, with training done on a Titan V GPU.",
     
-    categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.PracticalMachineLearning, BlogCategory.Infrastructure, BlogCategory.NLP],
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.PracticalMachineLearning, BlogCategory.Infrastructure, BlogCategory.NLP],
         techStack: [TechStack.Python, TechStack.PyTorch],
-        id: 16
+        id: 16,
+        blogLink: null
     },
     {
         img: "SL-042422-49910-15.jpg",
@@ -167,7 +184,8 @@ export const projects: ProjectTemplateProps[] = [
         " It contains basic image operations such as scaling, interpolation, convolution implemented from scratch in plain Java.",
         categories: [BlogCategory.ComputerVision],
         techStack: [TechStack.Java],
-        id: 17
+        id: 17,
+        blogLink: null
     },
     {
         img: "retro-computer-desk-arrangement.jpg",
@@ -178,7 +196,8 @@ export const projects: ProjectTemplateProps[] = [
         " It is currently still in development and I am adding several changes in the upcoming weeks.",
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
-        id: 18
+        id: 18,
+        blogLink: null
     },
     {
         img: "gradient_brain.jpg",
@@ -189,7 +208,8 @@ export const projects: ProjectTemplateProps[] = [
         " It is currently still in development and I am adding several changes in the upcoming weeks since I am still learning a lot about Reinforcement Learning.",
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
         techStack: [TechStack.Python, TechStack.PyTorch],
-        id: 19
+        id: 19,
+        blogLink: null
     },
     {
         img: "182133363342544.jpg",
@@ -200,7 +220,8 @@ export const projects: ProjectTemplateProps[] = [
         "In the future I am planning to add more features to the model and to improve the performance of the model. Further I want to inlcude different types and concepts of Diffusion models.",
           categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ComputerVision],
         techStack: [TechStack.Python, TechStack.PyTorch],
-        id: 20
+        id: 20,
+        blogLink: null
     },
     {
         img: "ai-cloud-concept-with-robot-arm.jpg",
@@ -211,7 +232,8 @@ export const projects: ProjectTemplateProps[] = [
         " It is currently still in development and I am adding several changes in the upcoming weeks. Main algorithms are Q-Learning, Deep Q-Learning and PPO, implemented from scratch.",
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ComputerVision],
         techStack: [TechStack.Python, TechStack.PyTorch],
-        id: 20
+        id: 21,
+        blogLink: null
     },
     {
         img: "lats2.jpg",
@@ -222,7 +244,19 @@ export const projects: ProjectTemplateProps[] = [
         "The goal was to optimize location allocation and compare the model's performance with traditional heuristics.",
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.GraphNeuralNetworks, BlogCategory.ReinforcementLearning, BlogCategory.PracticalMachineLearning],
         techStack: [TechStack.Python, TechStack.PyTorch, TechStack.Java],
-        id: 21
+        id: 22,
+        blogLink: null
+    },
+    {
+        img: "gamesmall.png",
+        link: "https://github.com/Coluding/2DGameDev",
+        title: "Developing a 2D Game with SFML using C++",
+        summary: "This repository presents a simple 2D Jump & Run game developed to enhance my C++ skills and gain a deeper understanding of game development. By implementing core mechanics, rendering, and physics manually, the project offers hands-on experience with fundamental systems rather than relying on prebuilt engines. Additionally, the game serves as a foundation for RL experiments, providing a customizable environment for training RL agents, thanks to complete control over its dynamics" +
+        ". Future plans include integrating the game with RL frameworks using JAX and Flax, enhancing gameplay with dynamic level generation, power-ups, and enemy AI, and improving visualization for richer player and agent feedback.",
+        categories: [BlogCategory.Engineering, BlogCategory.LowLevel],
+        techStack: [TechStack.CPP],
+        id: 23,
+        blogLink: null
     }
 
 ]

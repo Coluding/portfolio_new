@@ -42,6 +42,52 @@ export const blogs: BlogTemplateProps[] = [
         date: "2024-04-04",
     },
     {
+        img: "eine-studioportrait-collage-unterschiedlicher-menschen.jpg",
+        title: "Face Similarity Detection with Siamese Networks",
+        summary: "This project implements a Siamese Network for face similarity detection. The model is trained to distinguish between similar and dissimilar faces. The project explores the theoretical foundations of Siamese Networks, including the use of contrastive loss for learning meaningful embeddings. Code for data preprocessing, model training, and evaluation is included.",
+        categories: [BlogCategory.DeepLearning, BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning],
+        id: 11,
+        content: ["siamese.pdf"],
+        date: "2024-04-10",
+    },
+    {
+        img: "6157.jpg",
+        title: "Comparing DeepLabV3, DeepLabV3+, and U-Net for Human Body Segmentation",
+        summary: "This project compares the performance of DeepLabV3, DeepLabV3+, and U-Net models for human body segmentation. The models are trained on a dataset of human body images and evaluated using segmentation accuracy metrics. Insights into the impact of Dice Loss and Cross Entropy Loss are explored to improve performance.",
+        categories: [BlogCategory.DeepLearning, BlogCategory.ComputerVision,],
+        id: 12,
+        content: ["humanbodyseg.pdf"],
+        date: "2024-04-12",
+    },
+    {
+        img: "3571486.jpg",
+        title: "RetinaNet for Object Detection: A Theoretical and Practical Exploration",
+        summary: "This project implements the RetinaNet model, a state-of-the-art single-stage object detection model. RetinaNet is faster and more accurate than two-stage models, making it ideal for real-time detection tasks. The repository includes code for training, evaluation, and pre-trained models, offering insights into how RetinaNet handles small object detection.",
+        categories: [BlogCategory.DeepLearning, BlogCategory.ComputerVision,],
+        id: 13,
+        content: ["RetinaNet.pdf"],
+        date: "2024-04-15",
+    },
+    {
+        img: "26062.jpg",
+        title: "Vision Transformer: Image Classification with Transformers",
+        summary: "This project implements a Vision Transformer (ViT) for image classification. The ViT model is trained on a dataset of images and classifies them into different categories. The project explores the theoretical underpinnings of Vision Transformers and compares their efficiency with Convolutional Neural Networks (CNNs) for small and large datasets.",
+        categories: [BlogCategory.DeepLearning, BlogCategory.ComputerVision, BlogCategory.TheoreticalMachineLearning],
+        id: 14,
+        content: ["vit.pdf"],
+        date: "2024-04-18",
+    },
+    {
+        img: "verkehrszeichen-auf-der-strasse.jpg",
+        title: "YOLOv1 for Traffic Sign Detection: A Theoretical Implementation",
+        summary: "This project implements the YOLOv1 (You Only Look Once) model for detecting traffic signs in images. YOLOv1 is a single-stage object detection model that predicts bounding boxes and class probabilities simultaneously. The project includes data preprocessing, model training, and evaluation, providing insights into the YOLO algorithm's speed and accuracy.",
+        categories: [BlogCategory.DeepLearning, BlogCategory.ComputerVision],
+        id: 15,
+        content: ["yolov1_traffic_signs.pdf"],
+        date: "2024-04-20",
+    },
+    
+    {
         img: "126.jpg",
         title: "Basics of Reinforcement Learning: Epsilon Greedy Algorithm, Optimistic Initial Values and Upper Confidence Bound",
         summary: "Reinforcement learning is a type of machine learning that involves training an agent to make decisions within an environment in order to maximize some notion of cumulative reward. The agent learns to achieve a goal in an uncertain, potentially complex environment." +
@@ -62,6 +108,10 @@ The exploration-exploitation trade-off is a fundamental aspect of reinforcement 
         date: "2024-02-20",
 
     },
+    {
+
+    },
+
 
     {
         img: "126.jpg",
