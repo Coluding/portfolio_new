@@ -32,7 +32,8 @@ function App() {
         'select',
         'textarea',
         'button',
-        '.link'
+        '.link',
+        '.button',
       ]}
     />
     <Router>
