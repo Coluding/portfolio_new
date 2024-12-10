@@ -110,8 +110,14 @@ const AboutMe = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                 <Typography textAlign={"justify"}>
-                I'm a Artifical Intelligence master student  at the University of Amsterdam. I studied Computer Science, Information Systems, and Business Administration in the bachelor student focusing on Machine Learning, with one Bachelor's thesis on making Transformer models more efficient for financial text analysis. I work as a Machine Learning Engineer and Full Stack Developer, applying my skills in software development and AI to solve real-world problems, while also researching NLP in finance as a Research Assistant at the University of Passau. My interests span AI, particularly in Computer Vision and NLP, and I'm currently delving into Reinforcement Learning to further understand how AI can learn and make decisions within its environment.        
-                    </Typography>
+                I am a Master’s student in Artificial Intelligence at the University of Amsterdam. I completed two bachelor's degrees in Computer Science, and Economics. Concurrently, I am also pursuing a Bachelor's in Mathematical Software Development at the Fernuniversität Hagen to deepen my understanding of mathematics for AI research.
+
+                My passion lies in Artificial Intelligence, particularly in Deep Learning, with a focus on NLP and Computer Vision. In my Bachelor's theses, I explored making Transformer models more efficient for financial text analysis and optimizing data center locations using Graph Neural Networks and Reinforcement Learning.
+
+                I work as a Machine Learning Engineer and Full-Stack Developer at KPMG, where I apply AI to solve real-world problems. Additionally, I conduct research as a Research Assistant at the University of Passau, focusing on self-supervised learning and pretraining large language models for financial applications.
+                I am particularly interested in how AI models can learn and adapt within dynamic environments, which has led me to explore Reinforcement Learning in greater depth. In this field, I am particuarly interested  how world models using self-supervised learning can make RL more sample efficient.
+                Currently, I am researching the application of Reinforcement Learning and Graph Neural Networks to operations research problems and working on a paper in this field. This research explores dynamic and stochastic environments to optimize complex decision-making processes.
+                I continuously engage in private projects to advance my skills, combining my expertise in software development and AI research to push the boundaries of what’s possible in machine learning.                    </Typography>
                     {true &&
                     <Box marginTop={"5%"}>
                     <Stepper activeStep={3} alternativeLabel>
