@@ -14,7 +14,6 @@ import cv_german from "../assets/lebenslauf_deutsch.pdf";
 
 const stepsStart = [
   '2020  Bachelor of Science Economics',
-  '2021 PwC Financial Mathematics',
   '2022 Bachelor of Science Information Systems',
   '2022 KPMG Data Scientist',
   '2023 Bachelor of Science Mathematical Computer Science',
@@ -172,14 +171,14 @@ const AboutMe = () => {
               href={ba}
               download="lukas-bierling-thesis.pdf"
             >
-            First bachelor's thesis
+            Thesis NLP
             </Button>
             <Button
               variant="contained"
               href={ba2}
               download="thesis_bierling_gnn_rl.pdf"
             >
-            Second bachelor's thesis
+            Thesis GNN + RL
             </Button>
           </Box>
         </Box>

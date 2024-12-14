@@ -2,20 +2,14 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Quicksand:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sriracha&display=swap');
+
 
   body {
-    font-family: 'Quicksand', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f4f8;
-    color: #333;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-  }
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
 
   * {
     box-sizing: border-box;
@@ -23,3 +17,4 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default GlobalStyle;
+
