@@ -87,6 +87,7 @@ const AboutMe = () => {
                 <AccordionSummary
                 onClick={() => setExpanded(!expanded)}
                 expandIcon={<ExpandMoreIcon />}>
+                  { expanded &&
                     <Box display={"flex"} flexDirection={"column"}>
                     <Typography textAlign={"justify"}>
                     I am a passionate AI enthusiast and Machine Learning Engineer focussing on theory and application of Deep Learning in the field of NLP, Computer vision and Reinforcement  Learning. <br/>
@@ -105,24 +106,63 @@ const AboutMe = () => {
             </Box>
                 }
                 </Box>
+    }
                 
                 </AccordionSummary>
                 <AccordionDetails>
-                <Typography textAlign={"justify"}>
-                I am a Master’s student in Artificial Intelligence at the University of Amsterdam. I completed two bachelor's degrees in Computer Science, and Economics. Concurrently, I am also pursuing a Bachelor's in Mathematical Software Development at the Fernuniversität Hagen to deepen my understanding of mathematics for AI research.
-                <br/>
-                <br/>
-                My passion lies in Artificial Intelligence, particularly in Deep Learning, with a focus on NLP and Computer Vision. In my Bachelor's theses, I explored making Transformer models more efficient for financial text analysis and optimizing data center locations using Graph Neural Networks and Reinforcement Learning.
-                <br/>
-                <br/>
-                I work as a Machine Learning Engineer and Full-Stack Developer at KPMG, where I apply AI to solve real-world problems. Additionally, I conduct research as a Research Assistant at the University of Passau, focusing on self-supervised learning and pretraining large language models for financial applications.
-                I am particularly interested in how AI models can learn and adapt within dynamic environments, which has led me to explore Reinforcement Learning in greater depth. In this field, my focus is on how world models using self-supervised learning can make RL more sample efficient.
-                <br/>
-                <br/>
-                Currently, I am researching the application of Reinforcement Learning and Graph Neural Networks to operations research problems and working on a paper in this field. This research explores dynamic and stochastic environments to optimize complex combinatorial decision-making processes.
-                <br/>
-                I continuously engage in private projects to advance my skills, combining my expertise in software development and AI research to push the boundaries of what’s possible in machine learning.                    </Typography>
-                    {true &&
+                <Accordion>
+  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+    <Typography variant="h3">Education</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography textAlign="justify">
+      I am a Master’s student in   Artificial Intelligence   at the   University of Amsterdam, where I focus on advanced AI concepts and research methodologies. I hold dual Bachelor's degrees in   Computer Science   and   Economics, which provide me with a unique interdisciplinary perspective. Additionally, I am pursuing a Bachelor's in   Mathematical Software Development   at   Fernuniversität Hagen   to deepen my mathematical expertise for AI research.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion>
+  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+    <Typography variant="h3">Research Focus</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography textAlign="justify">
+      My primary research interests lie in   Deep Learning, particularly in   Natural Language Processing, Computer Vision, and   Reinforcement Learning. In my Bachelor's theses, I explored innovative ways to improve   Transformer efficiency   for financial text analysis and developed strategies for optimizing   data center locations   using   Graph Neural Networks  and   RL . 
+
+      I actively implement and analyze   state-of-the-art research papers   to deepen my understanding and share insights through my   blog posts . My projects often combine   theoretical advancements   with practical applications, reflecting my dedication to bridging the gap between research and real-world implementation.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion>
+  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+    <Typography variant="h3">Research Details</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography textAlign="justify">
+      My research focuses on leveraging   self-supervised learning  to enable agents to   plan and act   effectively in   dynamic and stochastic environments . Specifically, I am investigating how SSL can enhance  Graph Neural Networks  and   Reinforcement Learning  to tackle   operations research problems   involving complex combinatorial decision-making.
+
+      I have implemented various research papers exploring these domains and contributed to building a   research community   through collaborations and knowledge sharing. By developing agents that can   learn graph-structured representations, my goal is to improve their ability to   simulate scenarios,   optimize planning strategies, and make informed decisions with limited data. 
+
+      My work on   world models   and   self-supervised techniques   aims to make RL more   sample-efficient   and adaptable to real-world constraints.
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+<Accordion>
+  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+    <Typography variant="h3">Professional Experience</Typography>
+  </AccordionSummary>
+  <AccordionDetails>
+    <Typography textAlign="justify">
+      I work as a   Machine Learning Engineer   and   Full-Stack Developer   at   KPMG, where I design and implement AI solutions for real-world challenges. My projects include developing   innovative computer vision models   for object detection and integrating   language models   into applications to enhance accessibility and usability for clients.
+
+      Additionally, as a   Research Assistant   at the   University of Passau, I focus on developing   self-supervised methods   for   pretraining large language models   tailored to financial applications. My role involves building   modular libraries   for document encoders, collaborating on research papers, and exploring advanced   representation learning techniques .
+    </Typography>
+  </AccordionDetails>
+</Accordion>
+
+      {true &&
                     <Box marginTop={"5%"}>
                     <Stepper activeStep={3} alternativeLabel>
                     {steps.map((label) => (

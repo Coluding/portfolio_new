@@ -117,9 +117,9 @@ const HomePage = () => {
                                     sequence={[
                                         'Hi, I am Lukas!',
                                         300, 
-                                        'Hi, I am Lukas!\nMachine Learning Engineer and Full Stack Developer.',
+                                        'Hi, I am Lukas!\nMachine Learning Researcher and Full Stack Developer.',
                                         300,
-                                        'Hi, I am Lukas!\nMachine Learning Engineer and Full Stack Developer.\n Welcome to my portfolio!'
+                                        'Hi, I am Lukas!\nMachine Learning Researcher and Full Stack Developer.\n Welcome to my portfolio!'
                                     ]}
                                     wrapper="span"
                                     speed={65}

@@ -8,7 +8,7 @@ import java from "../assets/icons8-java-50.png"
 import javascript from "../assets/icons8-javascript-50.png"
 import pytorch from "../assets/pytorch.png"
 import tensorflow from "../assets/icons8-tensorflow-48.png"
-import go from "../assets/go.png"
+import go from "../assets/c.svg"
 import docker from "../assets/icons8-docker-50.png"
 import azure from "../assets/icons8-azurblau-48.png"
 import google from "../assets/google-cloud.svg"
@@ -62,7 +62,7 @@ const Skills = () => {
                 gap: 2,
                 textAlign: "center",
             }}>
-                <Typography fontWeight={"bold"} variant={"body1"}>Web Development Tech Stack</Typography>
+                <Typography fontWeight={"bold"} variant={"body1"}>Software Development Tech Stack</Typography>
             </Box>
             <Box sx={{
                 gridColumn: "span 4",
@@ -252,7 +252,7 @@ const Skills = () => {
             }}>
                 <Box display={"flex"} justifyContent={"center"} alignItems={"center"} flexDirection={"column"}
                  padding={2} gap={0} textAlign={"center"}>
-                    <Typography variant={"body1"}>Golang</Typography>
+                    <Typography variant={"body1"}>C++</Typography>
                 <img src={go} alt={"golang"} width={logoWidth} height={logoHeight}/>
                 <LinearProgress variant={"determinate"}  value={50}
                 sx={{
