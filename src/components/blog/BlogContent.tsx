@@ -57,7 +57,7 @@ const MathBlog = () => {
                     
                     isMobile ? (
                       <Box sx={{ padding: theme.spacing(2), display:"flex", textAlign:"justify", 
-                      flexDirection:"column", justifyContent:"center" , width:"50%"}}>
+                      flexDirection:"column", justifyContent:"align" , width:"100%"}}>
                       <Typography variant="body1" textAlign={"justify"}>
                         This blog article was written in LaTeX and converted to PDF.
                         Latex PDF content cannot be read currently by the frame. Please download the file below. 
@@ -70,7 +70,7 @@ const MathBlog = () => {
                         href={new URL("/assets/" + content, import.meta.url).href}
                         download
                       >
-                        Download PDF
+                        Show PDF
                       </Button>
                       </Box>
                     ) : (
