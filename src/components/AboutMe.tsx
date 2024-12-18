@@ -97,12 +97,10 @@ const AboutMe = () => {
                     fontSize={isMobile ? theme.typography.body1.fontSize : theme.typography.h3.fontSize}
                     fontWeight={"bold"}
                     >
-                <TypeAnimation
-            
-                cursor={true}
-                sequence={["Expand to see more...", 1000 ]}
-                repeat={0}
-            />
+                  <Divider sx={{ width: '100%', marginTop: "5%", marginBottom: "5%"}}></Divider>
+                <Typography sx={{fontSize: isMobile ? "10%" : "90%", fontWeight: "bold"}}>
+                  Expand to see more ...
+                </Typography>
             </Box>
                 }
                 </Box>
@@ -112,7 +110,7 @@ const AboutMe = () => {
                 <AccordionDetails>
                 <Accordion>
   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-    <Typography variant="h3">Education</Typography>
+    <Typography  sx={{fontSize: isMobile ? "50%" : "150%", fontWeight: "bold"}}>Education</Typography>
   </AccordionSummary>
   <AccordionDetails>
     <Typography textAlign="justify">
@@ -123,7 +121,7 @@ const AboutMe = () => {
 
 <Accordion>
   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-    <Typography variant="h3">Research Focus</Typography>
+  <Typography  sx={{fontSize: isMobile ? "50%" : "150%", fontWeight: "bold"}}>Research Focus</Typography>
   </AccordionSummary>
   <AccordionDetails>
     <Typography textAlign="justify">
@@ -136,7 +134,7 @@ const AboutMe = () => {
 
 <Accordion>
   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-    <Typography variant="h3">Research Details</Typography>
+  <Typography  sx={{fontSize: isMobile ? "50%" : "150%", fontWeight: "bold"}}>Research Details</Typography>
   </AccordionSummary>
   <AccordionDetails>
     <Typography textAlign="justify">
@@ -151,7 +149,7 @@ const AboutMe = () => {
 
 <Accordion>
   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-    <Typography variant="h3">Professional Experience</Typography>
+  <Typography  sx={{fontSize: isMobile ? "50%" : "150%", fontWeight: "bold"}}>Professional Experience</Typography>
   </AccordionSummary>
   <AccordionDetails>
     <Typography textAlign="justify">

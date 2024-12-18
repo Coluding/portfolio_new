@@ -2,6 +2,10 @@ import { Box, Typography } from "@mui/material";
 import {useMediaQuery} from "@mui/material";
 import { LinearProgress } from '@mui/material';
 import {Divider} from "@mui/material";
+import { useNavigate } from 'react-router-dom';
+
+import { BlogCategory } from "../utils/entitities";
+
 
 import python from "../assets/icons8-python-50.png"
 import java from "../assets/icons8-java-50.png"
@@ -22,6 +26,12 @@ const Skills = () => {
     const logoHeight = isMobile ? "20px" : "40px";
     const jsLogoWidth = isMobile ? "25px" : "50px";
     const jsLogoHeight = isMobile ? "25px" : "50px";
+
+    const navigate = useNavigate();
+
+    const goToProjectsWithCategories = () => {
+        navigate('/projects', { state: { initialCategories: [BlogCategory.DeepLearning] } });
+      };
 
 
     return (
@@ -94,7 +104,7 @@ const Skills = () => {
                 gap: 2,
                 textAlign: "center",
             }}>
-                <Box>
+                <Box >
                     <Typography variant={"body1"}>Python</Typography>
                 <img src={python} alt={"python"} width={logoWidth} height={logoHeight }/>
                 <LinearProgress variant={"determinate"}  value={90}

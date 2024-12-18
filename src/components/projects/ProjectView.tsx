@@ -1,5 +1,7 @@
 import { Box, useTheme, Divider, Typography,Chip,  TextField, Grow, Paper, Autocomplete , useMediaQuery } from "@mui/material";
 import α from 'color-alpha';
+import { useLocation } from 'react-router-dom';
+
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useState } from "react";
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -33,6 +35,15 @@ const ProjectView = () => {
     const [categories, setCategories] = useState<string[]>([]);
     const [titles, setTitles] = useState<string[]>([]);
     const [filteredProjects, setFilteredProjects] = useState(projects);
+
+    const location = useLocation();
+
+    useEffect(() => {
+      if (location.state?.initialCategories) {
+        setCategories(location.state.initialCategories);
+      }
+    }, [location]);
+
     
 
     useEffect(() => {
