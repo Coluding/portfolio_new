@@ -2,9 +2,7 @@ import { Box, Typography } from "@mui/material";
 import {useMediaQuery} from "@mui/material";
 import { LinearProgress } from '@mui/material';
 import {Divider} from "@mui/material";
-import { useNavigate } from 'react-router-dom';
 
-import { BlogCategory } from "../utils/entitities";
 
 
 import python from "../assets/icons8-python-50.png"
@@ -25,14 +23,7 @@ const Skills = () => {
     const logoWidth = isMobile ? "20px" : "40px";
     const logoHeight = isMobile ? "20px" : "40px";
     const jsLogoWidth = isMobile ? "25px" : "50px";
-    const jsLogoHeight = isMobile ? "25px" : "50px";
-
-    const navigate = useNavigate();
-
-    const goToProjectsWithCategories = () => {
-        navigate('/projects', { state: { initialCategories: [BlogCategory.DeepLearning] } });
-      };
-
+    const jsLogoHeight = isMobile ? "25px" : "50px"
 
     return (
         <Box display={"grid"} gridTemplateColumns={"repeat(12, 1fr)"}

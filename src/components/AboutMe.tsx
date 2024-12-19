@@ -4,7 +4,6 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
-import { TypeAnimation } from "react-type-animation";
 
 import myself from "../assets/me.jpg";
 import cv from "../assets/lebenslauf.pdf";
