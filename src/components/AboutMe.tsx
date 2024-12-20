@@ -9,7 +9,7 @@ import myself from "../assets/me.jpg";
 import cv from "../assets/lebenslauf.pdf";
 import ba from "../assets/BA_kein_deckblatt.pdf";
 import ba2 from "../assets/thesis_bierling_gnn_rl_.pdf";
-import cv_german from "../assets/lebenslauf_deutsch.pdf";
+//import cv_german from "../assets/lebenslauf_deutsch.pdf";
 
 const stepsStart = [
   '2020  Bachelor of Science Economics',
