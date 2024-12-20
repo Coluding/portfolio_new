@@ -100,8 +100,7 @@ const HomePage = () => {
                         <Paper elevation={20} 
                             sx={{ 
                                 margin: 'none', 
-                                
-                                fontSize: isMobile ? theme.typography.caption.fontSize : theme.typography.body2.fontSize,
+                                fontSize: isMobile ? "50%" : "60%",
                                 maxWidth: isMobile ? "30vh" : "50vh",
                                 paddingLeft: '1rem', 
                                 paddingRight: '0.5rem',
@@ -113,7 +112,7 @@ const HomePage = () => {
                             }}>
                             <Box borderBottom={"0px solid grey"} display={"flex"} alignItems={"center"}
                                 marginBottom={"1%"}>
-                                <TypeAnimation
+                                <TypeAnimation 
                                     sequence={[
                                         'Hi, I am Lukas!',
                                         300, 

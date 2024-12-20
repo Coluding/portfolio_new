@@ -189,14 +189,22 @@ const ProjectView = () => {
             }}>
             {filteredProjects.map((project) => (
                 <>
-                               <Grow in={true} timeout={1000}>
+                {!isMobile &&
+                 <Box sx={{
+                    gridColumn: "span 1",
+                    gridRow: "span 1",
+                 }}>
+                 {undefined}
+                    </Box>
+}
+                <Grow in={true} timeout={1000}>
                 <Paper elevation={5} sx={{
                     ":hover": {
                         background: α("lightgray", 0.9),
                     },
                     cursor: "pointer",
                     display: "flex",
-                    gridColumn: (isMobile || isTablet) ? "span 6" : "span 3",
+                    gridColumn: isMobile ? "span 6" : "span 4",
                     gridRow: "span 1",
                  
                     alignItems: "start",
@@ -207,8 +215,17 @@ const ProjectView = () => {
                 <ProjectTemplate {...project} />
                 </Paper>
                 </Grow> 
+                {!isMobile &&
+                 <Box sx={{
+                    gridColumn: "span 1",
+                    gridRow: "span 1",
+                 }}>
+                 {undefined}
+                    </Box>
+}
                 </>
             ))}
+    
             </Box>
         </Box>
     )

@@ -26,9 +26,7 @@ const ProjectsHome = () => {
                 maxWidth: isMobile ? "75%" : "50%"
                }}>
               <Typography variant="body1" textAlign="justify">
-                I've worked on diverse projects spanning <b>AI</b>, <b>Machine Learning</b>, and <b>Software Development</b>, focusing primarily on <b>Natural Language Processing</b>, <b>Computer Vision</b>, and <b>Reinforcement Learning</b>. Additionally, I'm engaged in <b>Full Stack Development</b> projects. 
-
-                My work balances research and practical applications, as I believe both are essential for advancing AI and software development.
+                I've worked on diverse projects spanning <b>AI</b>, <b>Machine Learning</b>, and <b>Software Development</b>, focusing primarily on <b>Natural Language Processing</b>, <b>Computer Vision</b>, and <b>Reinforcement Learning</b>. Additionally, I'm engaged in <b>Full Stack Development</b> projects.  Feel free to check them out :)
                 </Typography>
 
                 </Box>
@@ -39,15 +37,20 @@ const ProjectsHome = () => {
                 }}>
                 <Button size="small"
                     onClick={() => navigate("/projects")}
+                    variant="contained"
                     sx={{
-                    color: "white",
-                    backgroundColor:"black",
-                    paddingLeft: "1.4%",
-                    paddingRight: "1.4%",
-                    borderRadius: "10px",
-                    ":hover": {
-                        backgroundColor: "gray",
-                    }
+                        color: "black",
+                        paddingLeft: "1.4%",
+                        paddingRight: "1.4%",
+                        backgroundColor:"black",
+                        borderRadius: "10px",
+                        fontSize: "80%",
+                        background: "white",
+                        ":hover": {
+                        color: "black",
+                        background: "lightgray"
+                        }
+
                 }}>
                     Check them out
                 </Button>

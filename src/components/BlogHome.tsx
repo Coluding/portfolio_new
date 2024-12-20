@@ -27,17 +27,22 @@ const BlogHome = () => {
                 </Box>
                 <Button size="small"
                     onClick={() => navigate("/blog")}
+                    variant="contained"
+
                     sx={{
-                    color: "white",
-                    paddingLeft: "1.4%",
-                    paddingRight: "1.4%",
-                    backgroundColor:"black",
-                    borderRadius: "10px",
-                    ":hover": {
-                        backgroundColor: "gray",
-                    }   
-                    
-                }}>
+                        color: "black",
+                        paddingLeft: "1.4%",
+                        paddingRight: "1.4%",
+                        backgroundColor:"black",
+                        borderRadius: "10px",
+                        fontSize: "80%",
+                        background: "white",
+                        ":hover": {
+                        color: "black",
+                        background: "lightgray"
+                        }
+                      }}
+                    >
                     Check them out
                 </Button>
         </Box>
