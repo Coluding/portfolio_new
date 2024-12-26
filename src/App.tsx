@@ -7,6 +7,7 @@ import HomePage from './container/HomePage';
 import BlogView from './components/blog/BlogView';
 import MathBlog from './components/blog/BlogContent';
 import ProjectView from './components/projects/ProjectView';
+import PaperView from './components/paper/PaperView';
 import theme from './utils/theme';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/blog/:id" element={<MathBlog />} />
         <Route path="/blog" element={<BlogView />} />
+        <Route path="/papers" element={<PaperView />} />
         <Route path="/projects" element={<ProjectView />} />
       </Routes>
     </Router>

@@ -6,7 +6,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
 
 import myself from "../assets/me.jpg";
-import cv from "../assets/lebenslauf.pdf";
+import cv from "../assets/cv_lukas_bierling.pdf";
 import ba from "../assets/BA_kein_deckblatt.pdf";
 import ba2 from "../assets/thesis_bierling_gnn_rl_.pdf";
 //import cv_german from "../assets/lebenslauf_deutsch.pdf";

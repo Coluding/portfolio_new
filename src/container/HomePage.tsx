@@ -8,6 +8,7 @@ import { TypeAnimation } from 'react-type-animation';
 import AboutMe from '../components/AboutMe';
 import Skills from '../components/Skills';
 import BlogHome from '../components/BlogHome';
+import PaperHome from '../components/PaperHome';
 import ProjectsHome from '../components/ProjectsHome.js';
 import Contact from '../components/Contact';
 import {ResponsiveBox} from '../components/ResponsiveElements.js';
@@ -191,6 +192,18 @@ const HomePage = () => {
                             fontSize: theme.typography.body1.fontSize
                         }} >Blog</Button>
                         </Link>
+
+                        <Link to="papers" smooth={true} duration={1000} color="white"  offset={offset}>
+                        <Button sx={{
+                            color: "white",
+                            "&:hover": {
+                                color: "black",
+                                backgroundColor: "white"
+                            },
+                            fontSize: theme.typography.body1.fontSize
+                        }} >Papers</Button>
+                        </Link>
+
                         <Link to="projects" smooth={true} duration={1000} color="white"  offset={offset}>
                         <Button sx={{
                             color: "white",
@@ -246,6 +259,13 @@ const HomePage = () => {
                     <BlogHome/>
                     </Box>
                     </Fade>
+                    <Box id="papers" marginTop={"0%"}>
+                        {undefined}
+                    </Box>
+                    <Box marginTop={"0%"} >
+                    <PaperHome/>
+                    </Box>
+
                   
                     <Fade in={displayBlog} timeout={1500}>
                     <Box id="projects" marginTop={"0%"} >

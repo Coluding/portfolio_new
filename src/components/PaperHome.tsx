@@ -2,10 +2,9 @@ import {Box, useTheme, Divider, Button, useMediaQuery, Typography} from "@mui/ma
 import { useNavigate } from "react-router-dom";
 
 
-const BlogHome = () => {
+const PaperHome = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
     const navigate = useNavigate();
     return (
         <Box display={"flex"} 
@@ -18,15 +17,15 @@ const BlogHome = () => {
             textAlign: "center",
         
         }}>
-             <Divider sx={{ width: '100%', fontWeight:"bold"}}>Blog</Divider>
+             <Divider sx={{ width: '100%', fontWeight:"bold"}}>Paper List</Divider>
         
             <Box fontSize={isMobile ? theme.typography.body1.fontSize : theme.typography.h3.fontSize}>
             <Typography>
-                   I write about AI, Machine Learning and Software Development
-                   </Typography>
+                A list of papers I have read and find interesting.<br/> Mainly RL and Computer Vision based papers.
+                </Typography>
                 </Box>
                 <Button size="small"
-                    onClick={() => navigate("/blog")}
+                    onClick={() => navigate("/papers")}
                     variant="contained"
                     sx={{
                         color: "black",
@@ -48,4 +47,4 @@ const BlogHome = () => {
     )
 }
 
-export default BlogHome
+export default PaperHome;
