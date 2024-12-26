@@ -19,9 +19,9 @@ const PaperHome = () => {
         }}>
              <Divider sx={{ width: '100%', fontWeight:"bold"}}>Paper List</Divider>
         
-            <Box fontSize={isMobile ? theme.typography.body1.fontSize : theme.typography.h3.fontSize}>
-            <Typography>
-                A list of papers I have read and find interesting.<br/> Mainly RL and Computer Vision based papers.
+            <Box fontSize={isMobile ? theme.typography.body1.fontSize : theme.typography.h3.fontSize} sx={{ maxWidth: isMobile ? "70%" : "25%"}}>
+            <Typography textAlign={"center"}>
+                A list of papers I have read and find interesting. Mainly RL and Computer Vision based papers.
                 </Typography>
                 </Box>
                 <Button size="small"

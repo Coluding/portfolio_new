@@ -20,7 +20,7 @@ const BlogHome = () => {
         }}>
              <Divider sx={{ width: '100%', fontWeight:"bold"}}>Blog</Divider>
         
-            <Box fontSize={isMobile ? theme.typography.body1.fontSize : theme.typography.h3.fontSize}>
+            <Box fontSize={isMobile ? theme.typography.body1.fontSize : theme.typography.h3.fontSize} sx={{ maxWidth: isMobile ? "70%" : "25%"}}>
             <Typography>
                    I write about AI, Machine Learning and Software Development
                    </Typography>

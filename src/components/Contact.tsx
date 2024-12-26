@@ -131,7 +131,7 @@ const Contact = () => {
         }}>
           <Paper elevation={3} sx={{ p: 4, marginTop: 0, background:"white", width:"100%" }}>
             <Box display={"flex"} alignItems={"center"}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h3" gutterBottom>
               Lets get in touch!
             </Typography>
             </Box>
