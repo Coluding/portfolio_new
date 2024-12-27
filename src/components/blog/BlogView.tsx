@@ -85,10 +85,7 @@ const BlogView = () => {
                   
                 <Typography variant={isMobile ?  "h3" : 
                                     isTablet ? "h2": "h1"} fontWeight={"bold"}>My Personal Blog</Typography>
-                <Typography variant={isMobile ? "body1": 
-                                    isTablet? "body1": "h3"}>
-                    Accompany me on my journey through AI, Machine Learning and Software Development
-                </Typography>
+                
                 </Box>
             <Divider sx={{ width: '100%'}}></Divider>
             </Box>

@@ -3,6 +3,16 @@ import { BlogCategory } from "../../utils/entitities";
 
 export const blogs: BlogTemplateProps[] = [
     {
+        img: "imag_aug.png",
+        title: "Imagination Augmentation in Reinforcement Learning — An Overview",
+        summary: "Imagination Augmentation is a novel approach in reinforcement learning that leverages generative models to simulate possible future states and rewards. By using these imagined trajectories to augment the agent's experience, Imagination Augmentation can improve sample efficiency and generalization in reinforcement learning tasks. This blog post provides an overview of Imagination Augmentation, including its theoretical foundations, practical applications, and potential benefits. We will explore how generative models can be used to generate diverse and realistic trajectories, how these imagined experiences can be integrated into the agent's learning process, and how Imagination Augmentation compares to other model-based reinforcement learning methods.",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
+        content: ["https://medium.com/@lukasbierling/imagination-augmentation-in-reinforcement-learning-an-overview-9e5ff8df044f"],
+        id: 30,
+        date: "2023-02-15",
+    },
+
+    {
         img: "photo-1568952433726-3896e3881c65.jpg",
         title: "Locality Sensitive Hashing",
         summary: "Locality Sensitive Hashing (LSH) enhances attention mechanisms in machine learning, especially for tasks requiring the processing of long sequences, by addressing hardware limitations. Traditional attention mechanisms, crucial for understanding contextual relationships in data, face challenges with computational and memory demands, particularly in resource-constrained environments. LSH reduces these demands by grouping similar input elements, allowing attention to focus on relevant pairs and thus lowering computational complexity. This optimization facilitates the handling of larger datasets and complex tasks, such as text analysis and genome sequencing, on standard hardware, making advanced machine learning applications more accessible and scalable",

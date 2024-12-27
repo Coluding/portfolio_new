@@ -42,7 +42,16 @@ export  const BlogTemplate: React.FC<BlogTemplateProps>= (props) => {
 
     return (
       <Card sx={{minWidth:"100%", minHeight:"100%"}}>
-        <CardActionArea onClick={() => navigate("/blog/" + props.id)}>
+        <CardActionArea onClick={() =>{
+          //@ts-ignore
+        if (props.content[0].includes("https")){ 
+          //@ts-ignore
+          window.open(props.content[0],  "_blank");
+        }
+        else {
+           navigate("/blog/" + props.id)}
+        }
+      }>
         <CardMedia
           sx={{ height: 140 }}
           image={new URL( "/assets/" + props.img, import.meta.url).href }
