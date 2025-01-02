@@ -9,7 +9,16 @@ export const blogs: BlogTemplateProps[] = [
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
         content: ["https://medium.com/@lukasbierling/imagination-augmentation-in-reinforcement-learning-an-overview-9e5ff8df044f"],
         id: 30,
-        date: "2023-02-15",
+        date: "2024-12-15",
+    },
+    {
+        img: "lat-space.png",
+        title: "Training agents to plan in latent space — a technical overview",
+        summary: "Training agents to plan in latent space is a promising approach in reinforcement learning that aims to improve the sample efficiency and generalization of agents by learning a compact and structured representation of the environment. By training agents to plan in this latent space, they can make more informed decisions and achieve better performance on a wide range of tasks. This blog post provides a technical overview of training agents to plan in latent space, including the key concepts, techniques, and challenges involved. Additionally, the mathematical reasoning for sequential variational inference will be derived in detail to give a strong understanding of the topic.",
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
+        content: ["https://medium.com/@lukasbierling/training-agents-to-plan-in-latent-space-a-technical-overview-f4380a94ec88"],
+        id: 30,
+        date: "2024-12-15",
     },
 
     {

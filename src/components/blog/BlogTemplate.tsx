@@ -68,7 +68,8 @@ export  const BlogTemplate: React.FC<BlogTemplateProps>= (props) => {
         <CardActions>
           <Box display={"flex"} justifyContent={"space-between"} width={"100%"}>
             <Box>
-          <Button size="small" onClick={() => navigate("/blog/" + props.id)}>
+          {/*@ts-ignore */}
+          <Button size="small" onClick={() => !props.content[0].includes("https") && navigate("/blog/" + props.id)}>
             <Typography variant={"body1"}>Read  More</Typography>
             {!isMobile && <ArrowForwardIcon fontSize="small"/>}
           </Button>
