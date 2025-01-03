@@ -18,7 +18,7 @@ export const blogs: BlogTemplateProps[] = [
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
         content: ["https://medium.com/@lukasbierling/training-agents-to-plan-in-latent-space-a-technical-overview-f4380a94ec88"],
         id: 30,
-        date: "2024-12-15",
+        date: "2024-12-19",
     },
 
     {

@@ -46,7 +46,7 @@ const PaperTable: React.FC<PaperTableProps> = (props) => {
                   {isMobile ? 'Link' : paper.url}
                 </Link>
               </TableCell>
-              <TableCell>{paper.categories}</TableCell>
+              <TableCell>{paper.categories.join(", ")}</TableCell>
               <TableCell onClick={() => handleClickOpen(paper.abstract)} sx={{cursor: "pointer", 
                     ":hover": {background: "lightgray"}}} >
                     View Abstract
