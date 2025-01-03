@@ -14,6 +14,7 @@ export enum BlogCategory {
     TheoreticalMachineLearning = "Theoretical Machine Learning",
     Engineering = "Engineering",
     LowLevel = "Low Level",
+    SSL = "Self Supervised Learning", 
 }
 
 export enum TechStack {
