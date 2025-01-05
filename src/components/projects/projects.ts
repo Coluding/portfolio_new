@@ -257,6 +257,16 @@ export const projects: ProjectTemplateProps[] = [
         techStack: [TechStack.CPP],
         id: 23,
         blogLink: null
+    },
+    {
+        img: "imag_aug.png",
+        link: "https://github.com/Coluding/world-models",
+        title: "World Models: Model based Reinforcement Learning playground",
+        summary: "This porject is about model based Reinforcement Learning. I implemented several model based RL research paper and am currently experimenting with different model architectures and training methods. Papers I considered are 'World Models', 'Learning Learning Latent Dynamics for Planning from Pixels' and 'Dream to Control: Learning Behaviors by Latent Imagination'." ,
+        categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.SSL, BlogCategory.ReinforcementLearning],
+        techStack: [TechStack.Python, TechStack.PyTorch],
+        id: 24,
+        blogLink: null
     }
 
 ]
