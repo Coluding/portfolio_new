@@ -17,7 +17,7 @@ export const blogs: BlogTemplateProps[] = [
         summary: "Planning in latent space enables agents to learn compact representations of environments, improving decision-making. This post covers key techniques and challenges, including sequential variational inference.",
         categories: [BlogCategory.TheoreticalMachineLearning, BlogCategory.ReinforcementLearning],
         content: ["https://medium.com/@lukasbierling/training-agents-to-plan-in-latent-space-a-technical-overview-f4380a94ec88"],
-        id: 30,
+        id: 31,
         date: "2024-12-19",
     },
     {
